@@ -1,0 +1,17 @@
+welcome-page {
+    display: flex;
+    flex-direction: column;
+    height: calc(100dvh - 40px);
+
+    & h1 {
+        align-self: center;
+    }
+
+    & img {
+        align-self: center;
+
+        height: 90%;
+        width: 90%;
+        object-fit: contain;
+    }
+}

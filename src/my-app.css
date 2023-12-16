@@ -1,6 +1,31 @@
+html {
+  background-color: black;
+  color: beige;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+my-app {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  color: white;
+  gap: 20px;
+  height: 100dvh;
+  overflow: hidden;
+
+  & au-viewport {
+    padding: 20px 20px 20px 0px;
+  }
+}
+
 nav {
   background: #eee;
   display: flex;
+  flex-direction: column;
+  height: 100dvh;
 }
 
 a {

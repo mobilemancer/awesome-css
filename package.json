@@ -8,24 +8,26 @@
   },
   "license": "UNLICENSED",
   "dependencies": {
-    "aurelia": "latest",
-    "@aurelia/router": "latest"
+    "@aurelia/router": "latest",
+    "aurelia": "latest"
   },
   "devDependencies": {
-    "eslint": "^8.43.0",
+    "@aurelia/parcel-transformer": "latest",
     "@aurelia/testing": "latest",
+    "@parcel/transformer-inline-string": "^2.9.3",
+    "@parcel/transformer-typescript-tsc": "^2.9.3",
+    "@types/node": "^18.11.18",
+    "@typescript-eslint/eslint-plugin": "^5.60.1",
+    "@typescript-eslint/parser": "^5.60.1",
+    "eslint": "^8.43.0",
     "htmlhint": "^1.1.4",
+    "parcel": "^2.9.3",
+    "parcel-plugin-static-files-copy": "^2.6.0",
+    "parcel-reporter-static-files-copy": "^1.5.3",
     "stylelint": "^15.11.0",
     "stylelint-config-standard": "^34.0.0",
-    "@aurelia/parcel-transformer": "latest",
-    "@parcel/transformer-typescript-tsc": "^2.9.3",
-    "@parcel/transformer-inline-string": "^2.9.3",
-    "parcel": "^2.9.3",
-    "@types/node": "^18.11.18",
-    "typescript": "^5.1.6",
     "tslib": "^2.6.0",
-    "@typescript-eslint/eslint-plugin": "^5.60.1",
-    "@typescript-eslint/parser": "^5.60.1"
+    "typescript": "^5.1.6"
   },
   "scripts": {
     "lint:js": "eslint src --ext .js,.ts",
@@ -45,5 +47,9 @@
   },
   "aurelia": {
     "hmr": false
+  },
+  "staticFiles": {
+    "staticPath": "./src/static",
+    "staticOutDir": "static"
   }
 }
