@@ -1,0 +1,4 @@
+h2:has(+ p) {
+    color: purple;
+    margin-bottom: 0px;
+}
