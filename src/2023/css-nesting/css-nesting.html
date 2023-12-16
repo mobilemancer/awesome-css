@@ -1,0 +1,21 @@
+<h1>CSS Nesting</h1>
+
+<pre>
+    .section-one {
+        & h2 {
+            background: linear-gradient(to right, purple, hotpink);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            width: fit-content;
+        }
+    }
+</pre>
+
+<section class="section-one">
+  <h2>Section One</h2>
+</section>
+
+<section class="section-two">
+  <h2>Section Two</h2>
+</section>
