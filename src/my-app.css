@@ -17,7 +17,7 @@ my-app {
   overflow: hidden;
 
   & au-viewport {
-    /* padding: 20px 20px 20px 0px; */
+    height: 100dvh;
   }
 }
 
