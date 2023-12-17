@@ -1,0 +1,22 @@
+scroll-snap {
+    display: block;
+    height: 100dvh;
+    overflow-y: scroll;
+
+    .card-container {
+        width: 300px;
+        height: 450px;
+        overflow-y: scroll;
+        scroll-snap-type: y mandatory;
+    }
+
+    .card {
+        width: 300px;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 50px;
+        scroll-snap-align: center;
+    }
+}
