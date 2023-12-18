@@ -57,3 +57,19 @@ pre {
   border-radius: 5px;
   padding: 20px;
 }
+
+xmp {
+  width: fit-content;
+  background-color: darkslateblue;
+  /* top, right, bottom, left */
+  box-shadow: inset 0px 4px 3px -2px #000,
+    inset -4px 0px 3px -2px #fff,
+    inset 0px -4px 3px -2px #fff,
+    inset 4px 0px 3px -2px #000;
+  /* or merged top-left, bottom-right */
+  box-shadow: inset 4px 4px 3px -2px #000,
+    inset -4px -4px 3px -2px #fff;
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 20px;
+}

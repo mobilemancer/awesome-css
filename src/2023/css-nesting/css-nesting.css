@@ -1,5 +1,5 @@
 .section-one {
-    & h2 {
+    h2 {
         background: linear-gradient(to right, purple, hotpink);
         -webkit-background-clip: text;
         background-clip: text;

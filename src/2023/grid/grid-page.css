@@ -1,3 +1,10 @@
+grid-page {
+    display: block;
+    overflow-y: scroll;
+    height: 100dvh;
+    padding-right: 20px;
+}
+
 .container {
     background-color: coral;
     display: grid;
@@ -17,29 +24,27 @@
 .named-container {
     background-color: green;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
     grid-template-areas: "header header header" "left main sidebar" "footer footer footer";
 
-    & .item1 {
+    .item1 {
         background-color: violet;
         grid-area: header;
     }
 
-    & .item2 {
+    .item2 {
         grid-area: left;
     }
 
-    & .item3 {
+    .item3 {
         grid-area: main;
     }
 
-    & .item4 {
+    .item4 {
         grid-area: sidebar;
     }
 
-    & .item5 {
+    .item5 {
         background-color: violet;
         grid-area: footer;
     }
-
 }

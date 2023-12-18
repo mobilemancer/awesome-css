@@ -1,8 +1,14 @@
 <h1>CSS Nesting</h1>
 
+<p>
+  CSS nesting used to be a priviliege only available for users of CSS
+  pre-processors.
+</p>
+<p>Now available in all browsers! 😃</p>
+
 <pre>
     .section-one {
-        & h2 {
+        h2 {
             background: linear-gradient(to right, purple, hotpink);
             -webkit-background-clip: text;
             background-clip: text;
@@ -11,6 +17,16 @@
         }
     }
 </pre>
+
+<xmp>
+  <section class="section-one">
+    <h2>Section One</h2>
+  </section>
+  
+  <section class="section-two">
+    <h2>Section Two</h2>
+  </section>  
+</xmp>
 
 <section class="section-one">
   <h2>Section One</h2>

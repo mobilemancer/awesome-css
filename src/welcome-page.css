@@ -1,17 +1,44 @@
 welcome-page {
-    display: flex;
-    flex-direction: column;
-    height: calc(100dvh - 40px);
+    display: block;
+    overflow-x: hidden;
+    height: 100dvh;
+    scroll-snap-type: y mandatory;
 
-    & h1 {
-        align-self: center;
-    }
+    .section {
+        scroll-snap-align: start;
+        display: flex;
+        flex-direction: column;
+        height: calc(100vh - 10px);
+        width: 915px;
 
-    & img {
-        align-self: center;
+        & h1 {
+            align-self: center;
+        }
 
-        height: 90%;
-        width: 90%;
-        object-fit: contain;
+        & img {
+            align-self: center;
+
+            height: 80%;
+            width: 80%;
+            object-fit: contain;
+        }
+
+        .side-by-side {
+            display: flex;
+            flex-direction: row;
+            height: 70%;
+
+            img {
+                width: 50%;
+            }
+
+            .tall {
+                height: 70%;
+            }
+
+            .wide {
+                width: 70%;
+            }
+        }
     }
 }

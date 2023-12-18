@@ -2,7 +2,7 @@ flex-gap {
     .flex-container {
         display: flex;
         flex-wrap: wrap;
-        gap: 15px 5px;
+        gap: 20px 10px;
     }
 
     .card {

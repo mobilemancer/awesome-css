@@ -1,5 +1,27 @@
 <h1>Grid!</h1>
 
+<p>
+  Maybe not supernew, but still one of the most useful layout features released
+  in CSS over the last 10 years! 🥰
+</p>
+
+<pre>
+  .container {
+    background-color: coral;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+</pre>
+<xmp>
+  <section class="container">
+    <div class="item">Hello 1</div>
+    <div class="item">Hello 2</div>
+    <div class="item">Hello 3</div>
+    <div class="item">Hello 4</div>
+    <div class="item">Hello 5</div>
+  </section>
+</xmp>
+
 <section class="container">
   <div class="item">Hello 1</div>
   <div class="item">Hello 2</div>
@@ -7,6 +29,46 @@
   <div class="item">Hello 4</div>
   <div class="item">Hello 5</div>
 </section>
+
+<pre>
+  .named-container {
+    background-color: green;
+    display: grid;
+    grid-template-areas: "header header header" "left main sidebar" "footer footer footer";
+
+    .item1 {
+        background-color: violet;
+        grid-area: header;
+    }
+
+    .item2 {
+        grid-area: left;
+    }
+
+    .item3 {
+        grid-area: main;
+    }
+
+    .item4 {
+        grid-area: sidebar;
+    }
+
+    .item5 {
+        background-color: violet;
+        grid-area: footer;
+    }
+  }
+</pre>
+
+<xmp>
+  <section class="named-container">
+    <div class="item item5">Footer</div>
+    <div class="item item4">Right side</div>
+    <div class="item item3">Middle</div>
+    <div class="item item2">Left side</div>
+    <div class="item item1">Header</div>
+  </section>
+</xmp>
 
 <section class="named-container">
   <div class="item item5">Footer</div>
