@@ -12,3 +12,4 @@ export * from "./2023/color-functions/color-functions";
 export * from "./2023/custom-properties/custom-properties";
 export * from "./2023/flex-gap/flex-gap";
 export * from "./2023/scrollbased-anim/scrollbased-anim";
+export * from "./2023/sub-grid/sub-grid";

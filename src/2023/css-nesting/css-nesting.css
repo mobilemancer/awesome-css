@@ -1,3 +1,10 @@
+css-nesting {
+    display: block;
+    overflow-y: scroll;
+    height: 100dvh;
+    padding-right: 20px;
+}
+
 .section-one {
     h2 {
         background: linear-gradient(to right, purple, hotpink);

@@ -2,6 +2,12 @@
 <p>Allows snapping items in "place" when scrolling.</p>
 <p>Used to be done with JavaScript in the good old days 😁</p>
 
+<h2>Modes</h2>
+<p>Proximity or Mandatory</p>
+
+<h2>Direction</h2>
+<p>X or Y axis</p>
+
 <pre>
 .card-container {
     width: 300px;
@@ -11,23 +17,19 @@
 }
 
 .card {
-    width: 300px;
-    height: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 50px;
-    scroll-snap-align: center;
+    1. scroll-snap-align: start;
+    2. scroll-snap-align: center;
+    3. scroll-snap-align: end;
 }
 </pre>
 
 <section class="card-container">
-  <div class="card">Section 1</div>
-  <div class="card">Section 2</div>
-  <div class="card">Section 3</div>
-  <div class="card">Section 4</div>
-  <div class="card">Section 5</div>
-  <div class="card">Section 6</div>
-  <div class="card">Section 7</div>
-  <div class="card">Section 8</div>
+  <div class="card top">top</div>
+  <div class="card center">center</div>
+  <div class="card bottom">bottom</div>
+  <div class="card top">top</div>
+  <div class="card center">center</div>
+  <div class="card center">center</div>
+  <div class="card top">top</div>
+  <div class="card bottom">bottom</div>
 </section>

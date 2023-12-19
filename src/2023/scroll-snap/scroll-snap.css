@@ -17,6 +17,17 @@ scroll-snap {
         justify-content: center;
         align-items: center;
         font-size: 50px;
+    }
+
+    .center {
         scroll-snap-align: center;
+    }
+
+    .top {
+        scroll-snap-align: start;
+    }
+
+    .bottom {
+        scroll-snap-align: end;
     }
 }

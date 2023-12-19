@@ -1,4 +1,10 @@
-h2:has(+ p) {
-    color: purple;
-    margin-bottom: 0px;
+has-selector {
+    display: block;
+    padding-right: 20px;
+
+    h2:has(+ p) {
+        color: purple;
+        margin-bottom: 0px;
+    }
+
 }

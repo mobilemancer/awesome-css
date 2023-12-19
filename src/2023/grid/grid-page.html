@@ -5,10 +5,13 @@
   in CSS over the last 10 years! 🥰
 </p>
 
+<h2>Creating a Basic Grid</h2>
+
 <pre>
   .container {
     background-color: coral;
     display: grid;
+    gap: 20px;
     grid-template-columns: repeat(3, 1fr);
   }
 </pre>
@@ -30,10 +33,13 @@
   <div class="item">Hello 5</div>
 </section>
 
+<h2>Creating a Grid Using Named Areas</h2>
+
 <pre>
   .named-container {
     background-color: green;
     display: grid;
+    gap: 20px 0px;
     grid-template-areas: "header header header" "left main sidebar" "footer footer footer";
 
     .item1 {
@@ -71,6 +77,36 @@
 </xmp>
 
 <section class="named-container">
+  <div class="item item5">Footer</div>
+  <div class="item item4">Right side</div>
+  <div class="item item3">Middle</div>
+  <div class="item item2">Left side</div>
+  <div class="item item1">Header</div>
+</section>
+
+<h2>"Dynamic" Grid</h2>
+<p>
+  Possible to use @media or @container querries to modify the grid to make it
+  responsive
+</p>
+
+<pre>
+@container (max-width: 600px) {
+  .query-container {
+      grid-template-areas: "header" "main" "footer";
+
+      .item2 {
+          display: none;
+      }
+
+      .item4 {
+          display: none;
+      }
+  }
+}
+</pre>
+
+<section class="query-container">
   <div class="item item5">Footer</div>
   <div class="item item4">Right side</div>
   <div class="item item3">Middle</div>

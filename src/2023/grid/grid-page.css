@@ -3,18 +3,18 @@ grid-page {
     overflow-y: scroll;
     height: 100dvh;
     padding-right: 20px;
+
+    container-type: inline-size;
 }
 
 .container {
     background-color: coral;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }
 
 .item {
-    /* gap */
-    margin: 20px;
-
     background-color: #f2f2f2;
     color: black;
     padding: 20px;
@@ -24,6 +24,7 @@ grid-page {
 .named-container {
     background-color: green;
     display: grid;
+    gap: 20px 0px;
     grid-template-areas: "header header header" "left main sidebar" "footer footer footer";
 
     .item1 {
@@ -46,5 +47,48 @@ grid-page {
     .item5 {
         background-color: violet;
         grid-area: footer;
+    }
+}
+
+.query-container {
+    background-color: green;
+    display: grid;
+    gap: 20px;
+    grid-template-areas: "header header header" "left-side main sidebar" "footer footer footer";
+
+    .item1 {
+        background-color: violet;
+        grid-area: header;
+    }
+
+    .item2 {
+        grid-area: left-side;
+    }
+
+    .item3 {
+        grid-area: main;
+    }
+
+    .item4 {
+        grid-area: sidebar;
+    }
+
+    .item5 {
+        background-color: violet;
+        grid-area: footer;
+    }
+}
+
+@container (max-width: 600px) {
+    .query-container {
+        grid-template-areas: "header" "main" "footer";
+
+        .item2 {
+            display: none;
+        }
+
+        .item4 {
+            display: none;
+        }
     }
 }

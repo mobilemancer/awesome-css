@@ -6,26 +6,27 @@
 </p>
 <p>Now available in all browsers! 😃</p>
 
+<h2>Simple Nesting</h2>
 <pre>
-    .section-one {
-        h2 {
-            background: linear-gradient(to right, purple, hotpink);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            width: fit-content;
-        }
+.section-one {
+    h2 {
+        background: linear-gradient(to right, purple, hotpink);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        width: fit-content;
     }
+}
 </pre>
 
 <xmp>
-  <section class="section-one">
-    <h2>Section One</h2>
-  </section>
-  
-  <section class="section-two">
-    <h2>Section Two</h2>
-  </section>  
+<section class="section-one">
+  <h2>Section One</h2>
+</section>
+
+<section class="section-two">
+  <h2>Section Two</h2>
+</section>  
 </xmp>
 
 <section class="section-one">
@@ -35,3 +36,7 @@
 <section class="section-two">
   <h2>Section Two</h2>
 </section>
+
+<h2>Complex Nesting</h2>
+<p>For combined selectors use ampersand "&".</p>
+<p>The common sibling and child slectors are also available.</p>
