@@ -1,6 +1,11 @@
+:root {
+  --menu-width: 200px;
+}
+
 html {
   background-color: black;
   color: beige;
+  font-size: 20px;
 }
 
 body {
@@ -10,7 +15,7 @@ body {
 
 my-app {
   display: grid;
-  grid-template-columns: 200px 1fr;
+  grid-template-columns: var(--menu-width) 1fr;
   color: white;
   gap: 20px;
   height: 100dvh;
@@ -18,6 +23,43 @@ my-app {
 
   & au-viewport {
     height: 100dvh;
+  }
+}
+
+.slides-section {
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+
+  & h1 {
+    align-self: center;
+  }
+
+  & img {
+    align-self: center;
+
+    height: 80%;
+    width: 80%;
+    object-fit: contain;
+  }
+
+  .side-by-side {
+    display: flex;
+    flex-direction: row;
+    height: 70%;
+
+    img {
+      width: 50%;
+    }
+
+    .tall {
+      height: 70%;
+    }
+
+    .wide {
+      width: 70%;
+    }
   }
 }
 
