@@ -98,6 +98,7 @@ pre {
   border: 1px solid gray;
   border-radius: 5px;
   padding: 20px;
+  min-width: 50dvw;
 }
 
 xmp {
@@ -114,6 +115,8 @@ xmp {
   border: 1px solid gray;
   border-radius: 5px;
   padding: 20px;
+  min-width: 50dvw;
+
 }
 
 h2 {

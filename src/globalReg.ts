@@ -1,6 +1,8 @@
 export * from "./welcome-page";
 export * from "./missing-page";
 
+export * from "./components/available-usable";
+
 export * from "./2023/container-queries/container-queries";
 export * from "./2023/grid/grid-page";
 export * from "./2023/css-nesting/css-nesting";

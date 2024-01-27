@@ -1,13 +1,16 @@
-<h1>CSS Nesting</h1>
+<div class="slides-section">
+  <h1>CSS Nesting</h1>
 
-<p>
-  CSS nesting used to be a priviliege only available for users of CSS
-  pre-processors.
-</p>
-<p>Now available in all browsers! 😃</p>
+  <available-usable date="2023" url="https://caniuse.com/css-nesting"></available-usable>
 
-<h2>Simple Nesting</h2>
-<pre>
+  <p>🎓 CSS nesting used to be a priviliege only available for users of CSS pre-processors</p>
+  <p>🥰 Big part of why SASS and LESS became so popular </p>
+  <p>😃 Now available in all browsers, no build tools required! </p>
+</div>
+
+<div class="slides-section">
+  <h2>Code: Simple Nesting</h2>
+  <pre>
 .section-one {
     h2 {
         background: linear-gradient(to right, purple, hotpink);
@@ -19,24 +22,38 @@
 }
 </pre>
 
-<xmp>
-<section class="section-one">
-  <h2>Section One</h2>
-</section>
+  <xmp>
+    <section class="section-one">
+      <h2>Section One</h2>
+    </section>
 
-<section class="section-two">
-  <h2>Section Two</h2>
-</section>  
-</xmp>
+    <section class="section-two">
+      <h2>Section Two</h2>
+    </section>
+  </xmp>
 
-<section class="section-one">
-  <h2>Section One</h2>
-</section>
+  <h2>Result</h2>
+  <section class="section-one">
+    <h2>Section One</h2>
+  </section>
 
-<section class="section-two">
-  <h2>Section Two</h2>
-</section>
+  <section class="section-two">
+    <h2>Section Two</h2>
+  </section>
+</div>
 
-<h2>Complex Nesting</h2>
-<p>For combined selectors use ampersand "&".</p>
-<p>The common sibling and child slectors are also available.</p>
+<div class="slides-section">
+  <h2>Code: Complex Nesting</h2>
+  <p>For combined selectors use ampersand "&".</p>
+  <p>The common sibling and child slectors are also available.</p>
+
+  <pre>
+  ul > li { }
+
+  ⬇️
+  
+  ul {
+    & > li { }
+  }
+  </pre>
+</div>

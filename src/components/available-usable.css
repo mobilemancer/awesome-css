@@ -1,0 +1,23 @@
+available-usable {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    height: 50px;
+    color: #D3D3D3;
+
+    font-style: italic;
+
+    a {
+        color: #E3E3E3;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+        text-decoration-color: purple;
+        text-decoration-style: wavy;
+        text-decoration-thickness: 2px;
+        background-color: unset;
+    }
+
+}
