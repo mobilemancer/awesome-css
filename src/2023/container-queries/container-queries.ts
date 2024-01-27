@@ -1,15 +1,16 @@
 export class ContainerQueries {
+    public container: HTMLElement;
     public containerWidth = 0;
 
-    public resize = () => {
-        const positionInfo = document.querySelector(".card-container")?.getBoundingClientRect();
-        const width = positionInfo?.width;
-        this.containerWidth = Math.floor(width);
+    attached() {
+        this.observer.observe(this.container);
     }
 
-    attached() {
-        window.addEventListener("resize", this.resize);
-        this.resize();
-    }
+    observer = new ResizeObserver(entries => {
+        for (const entry of entries) {
+            const targetElement = entry.target as HTMLElement;
+            this.containerWidth = targetElement.offsetWidth;
+        }
+    });
 
 }

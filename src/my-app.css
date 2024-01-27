@@ -63,6 +63,15 @@ my-app {
   }
 }
 
+.slides-section {
+  .bullets {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
 nav {
   background: #eee;
   display: flex;

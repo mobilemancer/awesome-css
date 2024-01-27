@@ -1,17 +1,27 @@
-<h1>Container Queries</h1>
+<div class="slides-section">
+  <h1>Container Queries</h1>
 
-<p>
-  In the good old days we used media queries for making our pages responsive.
-</p>
-<p>Media queries reacted to device charachteristics.</p>
-<p>We had to rely on JavaScript to respond to specific element sizes.</p>
+  <div class="bullets">
+    <p>🖥️ In the good old days we used media queries for making our pages responsive</p>
+    <p>📱 Media queries reacted to device characteristics</p>
+    <p>📏 We had to rely on JavaScript to respond to specific element sizes</p>
+  </div>
 
-<h2>Usage</h2>
+</div>
 
-<p>Define a parent container with a <em>Contianment Context</em>.</p>
+<div class="slides-section">
 
-<pre>
-@container (max-width: 600px) {
+  <h2>Usage</h2>
+
+  <p>Define a parent container with a <em>Contianment Context</em>.</p>
+
+  <pre>
+  .container  {
+    container-type: size | inline-size | normal;
+  }</pre>
+
+  <pre>
+  @container (max-width: 600px) {
   .big {
       width: 30%;
   }
@@ -22,54 +32,58 @@
 }
 </pre>
 
-<p>
-  Cards will be modified at container width = 600, Current container width:
-  ${containerWidth}
-</p>
 
-<div class="card-container">
-  <section class="card">
-    <h2>Card</h2>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-      voluptatum, quibusdam, quia, quae voluptatem voluptas quod exercitationem
-      quos voluptatibus quas doloribus.
-    </p>
-  </section>
+</div>
 
-  <section class="card big">
-    <h2>Card Big</h2>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-      voluptatum, quibusdam, quia, quae voluptatem voluptas quod exercitationem
-      quos voluptatibus quas doloribus.
-    </p>
-  </section>
+<div class="slides-section">
+  <p>
+    Cards will be modified at container width = 600, Current container width:
+    ${containerWidth}
+  </p>
+  <div ref="container" class="card-container">
+    <section class="card">
+      <h2>Card</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+        voluptatum, quibusdam, quia, quae voluptatem voluptas quod exercitationem
+        quos voluptatibus quas doloribus.
+      </p>
+    </section>
 
-  <section class="card big">
-    <h2>Card Big</h2>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-      voluptatum, quibusdam, quia, quae voluptatem voluptas quod exercitationem
-      quos voluptatibus quas doloribus.
-    </p>
-  </section>
+    <section class="card big">
+      <h2>Card Big</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+        voluptatum, quibusdam, quia, quae voluptatem voluptas quod exercitationem
+        quos voluptatibus quas doloribus.
+      </p>
+    </section>
 
-  <section class="card">
-    <h2>Card</h2>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-      voluptatum, quibusdam, quia, quae voluptatem voluptas quod exercitationem
-      quos voluptatibus quas doloribus.
-    </p>
-  </section>
+    <section class="card big">
+      <h2>Card Big</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+        voluptatum, quibusdam, quia, quae voluptatem voluptas quod exercitationem
+        quos voluptatibus quas doloribus.
+      </p>
+    </section>
 
-  <section class="card big">
-    <h2>Card Big</h2>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-      voluptatum, quibusdam, quia, quae voluptatem voluptas quod exercitationem
-      quos voluptatibus quas doloribus.
-    </p>
-  </section>
+    <section class="card">
+      <h2>Card</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+        voluptatum, quibusdam, quia, quae voluptatem voluptas quod exercitationem
+        quos voluptatibus quas doloribus.
+      </p>
+    </section>
+
+    <section class="card big">
+      <h2>Card Big</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+        voluptatum, quibusdam, quia, quae voluptatem voluptas quod exercitationem
+        quos voluptatibus quas doloribus.
+      </p>
+    </section>
+  </div>
 </div>

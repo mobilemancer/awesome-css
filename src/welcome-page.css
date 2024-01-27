@@ -3,6 +3,4 @@ welcome-page {
     overflow-x: hidden;
     height: 100dvh;
     scroll-snap-type: y mandatory;
-
-
 }

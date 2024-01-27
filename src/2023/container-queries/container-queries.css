@@ -1,5 +1,9 @@
 container-queries {
-    height: calc(100dvh - 80px);
+    display: block;
+    overflow-y: scroll;
+    height: 100dvh;
+    padding-right: 20px;
+    scroll-snap-type: y mandatory;
 }
 
 .card-container {
@@ -10,8 +14,8 @@ container-queries {
     box-sizing: border-box;
     width: 100%;
     height: 100%;
-    max-height: calc(100dvh - 381px);
     overflow-y: auto;
+    resize: horizontal;
 
     container-type: inline-size;
 }

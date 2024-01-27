@@ -3,13 +3,18 @@
 
   <available-usable date="2023" url="https://caniuse.com/css-nesting"></available-usable>
 
-  <p>🎓 CSS nesting used to be a priviliege only available for users of CSS pre-processors</p>
-  <p>🥰 Big part of why SASS and LESS became so popular </p>
-  <p>😃 Now available in all browsers, no build tools required! </p>
+  <section class="bullets">
+    <p>
+      🎓 CSS nesting used to be a priviliege only available for users of CSS
+      pre-processors
+    </p>
+    <p>🥰 Big part of why SASS and LESS became so popular</p>
+    <p>😃 Now available in all browsers, no build tools required!</p>
+  </section>
 </div>
 
 <div class="slides-section">
-  <h2>Code: Simple Nesting</h2>
+  <h2>Simple Nesting</h2>
   <pre>
 .section-one {
     h2 {
@@ -20,26 +25,18 @@
         width: fit-content;
     }
 }
-</pre>
+  </pre>
 
   <xmp>
     <section class="section-one">
       <h2>Section One</h2>
     </section>
-
-    <section class="section-two">
-      <h2>Section Two</h2>
-    </section>
   </xmp>
 
-  <h2>Result</h2>
-  <section class="section-one">
-    <h2>Section One</h2>
-  </section>
-
-  <section class="section-two">
-    <h2>Section Two</h2>
-  </section>
+  <h3>Result</h2>
+    <section class="section-one">
+      <h2>Section One</h2>
+    </section>
 </div>
 
 <div class="slides-section">
