@@ -1,18 +1,19 @@
 flex-gap {
     display: block;
-    padding-right: 20px;
     overflow-y: scroll;
     height: 100dvh;
+    padding-right: 20px;
+    scroll-snap-type: y mandatory;
 
     .flex-container {
         display: flex;
         flex-wrap: wrap;
-        gap: 20px 10px;
+        gap: 3rem 1rem;
     }
 
     .card {
         width: 30%;
-        height: 150px;
+        height: 120px;
         background-color: purple;
         border-radius: 10px;
     }

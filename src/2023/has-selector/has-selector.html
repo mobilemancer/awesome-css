@@ -1,34 +1,59 @@
-<h1>:has() Selector</h1>
+<div class="slides-section">
+  <h1>:has() Selector</h1>
 
-<h2>CSS to select H2 with following paragraph</h2>
-<pre>
-h2:has(+ p) {
-  color: purple;
-}
+  <available-usable date="2023" url="https://caniuse.com/css-has"></available-usable>
+
+  <section class="bullets">
+    <p>👪 In effect - a parent selector</p>
+    <p>⌛ We used to have this in SCSS</p>
+    <p>🙏 Highly requested feature for a long time</p>
+  </section>
+</div>
+
+<div class="slides-section">
+  <h2>Code: Use :has to select elements</h2>
+
+  <p>CSS to select H2 with following div</p>
+
+  <pre>
+  h2:has(+ div) {
+    color: purple;
+    margin-bottom: 0.5rem;
+  }
 </pre>
 
-<xmp>
+  <xmp>
+    <h2>H2 Heading</h2>
+
+    <h3>H3 Heading</h3>
+    <div>Lorem, ipsum...</div>
+
+    <h2>H2 Heading</h2>
+    <div>Lorem, ipsum...</div>
+  </xmp>
+
+</div>
+
+<div class="slides-section">
+  <h2>Result: Select the h2 being a parent to a p</h2>
   <h2>H2 Heading</h2>
+  <p>
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi
+    consectetur amet vel ea. Voluptas eveniet odio minus corporis velit suscipit,
+    a quia asperiores deserunt voluptates itaque autem ad alias neque?
+  </p>
 
   <h3>H3 Heading</h3>
-  <p>Lorem, ipsum...</p>
+  <div>
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi
+    consectetur amet vel ea. Voluptas eveniet odio minus corporis velit suscipit,
+    a quia asperiores deserunt voluptates itaque autem ad alias neque?
+  </div>
 
   <h2>H2 Heading</h2>
-  <p>Lorem, ipsum...</p>
-</xmp>
-
-<h2>H2 Heading</h2>
-
-<h3>H3 Heading</h3>
-<p>
-  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi
-  consectetur amet vel ea. Voluptas eveniet odio minus corporis velit suscipit,
-  a quia asperiores deserunt voluptates itaque autem ad alias neque?
-</p>
-
-<h2>H2 Heading</h2>
-<p>
-  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi
-  consectetur amet vel ea. Voluptas eveniet odio minus corporis velit suscipit,
-  a quia asperiores deserunt voluptates itaque autem ad alias neque?
-</p>
+  <div>
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi
+    consectetur amet vel ea. Voluptas eveniet odio minus corporis velit suscipit,
+    a quia asperiores deserunt voluptates itaque autem ad alias neque?
+  </div>
+</div>

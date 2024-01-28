@@ -38,12 +38,18 @@ container-queries {
     background-color: purple;
 }
 
-@container (max-width: 600px) {
+@container (max-width: 800px) {
     .big {
         width: 30%;
     }
 
-    .card h2 {
-        font-size: 1em;
+    .card {
+        h2 {
+            font-size: 1em;
+        }
+
+        .info {
+            display: none;
+        }
     }
 }

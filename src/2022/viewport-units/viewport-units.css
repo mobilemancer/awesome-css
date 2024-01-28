@@ -1,11 +1,17 @@
 viewport-units {
-    height: 100%;
     display: block;
-    overflow-y: auto;
+    overflow-y: scroll;
+    height: 100dvh;
     padding-right: 20px;
+    scroll-snap-type: y mandatory;
 
     & img {
-        max-height: 50dvh;
+        max-height: 70dvh;
+    }
+
+    footer {
+        margin-top: auto;
+        padding-bottom: 1rem;
     }
 
     & a {

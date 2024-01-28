@@ -1,10 +1,13 @@
 has-selector {
     display: block;
+    overflow-y: scroll;
+    height: 100dvh;
     padding-right: 20px;
+    scroll-snap-type: y mandatory;
 
-    h2:has(+ p) {
+    /* example code */
+    h2:has(+ div) {
         color: purple;
-        margin-bottom: 0px;
+        margin-bottom: 0.5rem;
     }
-
 }
