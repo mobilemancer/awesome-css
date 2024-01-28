@@ -1,7 +1,8 @@
 scroll-snap {
     display: block;
+    overflow-x: hidden;
     height: 100dvh;
-    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
 
     .card-container {
         width: 300px;
@@ -29,5 +30,9 @@ scroll-snap {
 
     .bottom {
         scroll-snap-align: end;
+    }
+
+    .none {
+        scroll-snap-align: none;
     }
 }

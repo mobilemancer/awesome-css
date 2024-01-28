@@ -1,35 +1,65 @@
-<h1>Scroll Snap</h1>
-<p>Allows snapping items in "place" when scrolling.</p>
-<p>Used to be done with JavaScript in the good old days 😁</p>
+<div class="slides-section">
+  <h1>Scroll Snap</h1>
 
-<h2>Modes</h2>
-<p>Proximity or Mandatory</p>
+  <available-usable date="2020-2023" url="https://caniuse.com/css-snappoints"></available-usable>
 
-<h2>Direction</h2>
-<p>X or Y axis</p>
+  <div class="bullets">
+    <p>📌 Allows snapping items in "place" when scrolling</p>
+    <p>🧭 Can set snap direction</p>
+    <p>🎯 Can set snap attach position</p>
+    <p>⚖️ Possible to set snap "strictnes"</p>
+    <p>⌛ Used to be done with JavaScript in the good old days</p>
+  </div>
+</div>
 
-<pre>
+<div class="slides-section">
+  <h2>Modes: Proximity or Mandatory </h2>
+
+  <div class="bullets">
+    <p> 📏 The `mandatory` mode in CSS scroll-snap ensures that the browser always snaps to a defined point</p>
+    <p>🎯 The `proximity` mode is less strict, allowing the content to snap to a point if it's close, but it's not
+      required</p>
+    <p>⚠️ Note: `mandatory` can be problematic if content is larger than expected</p>
+  </div>
+
+  <h2>Direction</h2>
+  <div class="bullets">
+    <p>🧭 The scroll-snap-type property defines the direction of scroll snapping</p>
+    <p>➡️ It can be x (horizontal), y (vertical), or both</p>
+  </div>
+
+  <h2>Attach</h2>
+  <div class="bullets">
+    <p>🎯 The scroll-snap-align property defines the position where the snap target is located when the scroll
+      operation finishes</p>
+    <p>📌 It can be start, center, end, or none</p>
+  </div>
+
+</div>
+
+<div class="slides-section">
+  <h2>Code</h2>
+  <pre>
 .card-container {
-    width: 300px;
-    height: 450px;
-    overflow-y: scroll;
-    scroll-snap-type: y mandatory;
+  scroll-snap-type: y mandatory;
 }
 
 .card {
-    1. scroll-snap-align: start;
-    2. scroll-snap-align: center;
-    3. scroll-snap-align: end;
+  scroll-snap-align: start | center | end | none;
 }
 </pre>
 
-<section class="card-container">
-  <div class="card top">top</div>
-  <div class="card center">center</div>
-  <div class="card bottom">bottom</div>
-  <div class="card top">top</div>
-  <div class="card center">center</div>
-  <div class="card center">center</div>
-  <div class="card top">top</div>
-  <div class="card bottom">bottom</div>
-</section>
+  <h2>Result</h2>
+  <section class="card-container">
+    <div class="card top">top</div>
+    <div class="card center">center</div>
+    <div class="card bottom">bottom</div>
+    <div class="card none">none</div>
+    <div class="card top">top</div>
+    <div class="card center">center</div>
+    <div class="card none">none</div>
+    <div class="card top">top</div>
+    <div class="card bottom">bottom</div>
+    <div class="card top">top</div>
+  </section>
+</div>
