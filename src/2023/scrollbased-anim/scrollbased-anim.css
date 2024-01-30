@@ -1,5 +1,47 @@
 scrollbased-anim {
+    display: block;
+    overflow-x: hidden;
+    height: 100dvh;
+    scroll-snap-type: y mandatory;
+
     img {
         height: 95%;
+    }
+}
+
+@keyframes bar-grow {
+    from {
+        background-color: purple;
+        transform: scaleX(0);
+    }
+
+    to {
+        background-color: hotpink;
+        transform: scaleX(1);
+    }
+}
+
+
+
+.scroll-port {
+    width: 300px;
+    height: 200px;
+
+    .content-port {
+        position: relative;
+        height: 190px;
+        overflow-y: scroll;
+
+        .animated-block {
+            height: 400px;
+
+            animation-timeline: scroll(nearest block);
+            animation-name: bar-grow;
+            animation-timing-function: linear;
+        }
+
+        .content {
+            height: 1000px;
+        }
     }
 }
