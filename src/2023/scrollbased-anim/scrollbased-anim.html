@@ -1,30 +1,33 @@
+<div class="progress-hover">
+    <!-- <div class="progress-bar"></div> -->
+</div>
 <div class="slides-section">
     <h1>Scroll based Animations</h1>
     <available-usable date="Experimental" url="https://caniuse.com/?search=animation-timeline"></available-usable>
 
     <div class="bullets">
-
-        <p>
-            The Scroll-driven Animations Specification defines two new types of timelines that you can use:
-        </p>
-        <p>
-            Scroll Progress Timeline: a timeline that is linked to the scroll position of a scroll container along a
-            particular
-            axis.
-        </p>
-        <p>
-            View Progress Timeline: a timeline that is linked to the relative position of a particular element within
-            its scroll
-            container.
-        </p>
+        <p>🕰️ The Scroll-driven Animations Specification define two types of timelines </p>
+        <p>📜 Scroll Progress Timeline: Links timeline to scroll position </p>
+        <p>👀 View Progress Timeline: Links timeline to element’s position </p>
+        <p>🎬 The animation it drives is defined with the @keyframes keyword</p>
     </div>
-
 </div>
 
 <div class="slides-section">
-    <h2>Code - Animation</h2>
+    <h2>Scroll Progress Timeline</h2>
+    <div class="bullets">
+        <p>🔄 Scroll-based timeline in CSS links the timeline to the scroll position </p>
+        <p>📏 As you scroll, the linked CSS animation advances or rewinds accordingly</p>
+    </div>
+    <h3>Syntax</h3>
     <pre>
-@keyframes bar-grow {
+animation-timeline: scroll(root | nearest | self block | inline | x | y);    </pre>
+</div>
+
+<div class="slides-section">
+    <h2>Code - Setup animation with @keyframes</h2>
+    <pre>
+@keyframes block-grow {
     from {
         background-color: purple;
         transform: scaleX(0);
@@ -49,7 +52,7 @@
     .animated-block {
         height: 400px;
 
-        animation-name: bar-grow;
+        animation-name: block-grow;
         animation-timeline: scroll(nearest block);
         animation-timing-function: linear;
     }
@@ -72,5 +75,52 @@
 </div>
 
 <div class="slides-section">
-    <img src="UC2.jpg" alt="" />
+    <h2>View Progress Timeline</h2>
+
+    <div class="bullets">
+        <p>📚 The view-timeline CSS shorthand property is used to define a named view progress timeline</p>
+        <p>🔄 The timeline progresses is based on the change in visibility of an element inside a scroller</p>
+        <p>🎯 The element that the view-timeline is set on is reffered to as the Subject</p>
+        <p>📈 The visibility of the subject inside the scroller is tracked — by default, the
+            timeline is at 0% at one edge of the scroller and 100% when at the opposite edge</p>
+        <p>🎥 The name is referenced in an animation-timeline declaration and used as the timeline progresses </p>
+        <p>🚫 If the scroller does not overflow or if the overflow is hidden or clipped, no timeline will be created</p>
+    </div>
+</div>
+
+<div class="slides-section">
+    <h2>Code - Animation Setup</h2>
+    <pre>
+@keyframes bar-grow {
+    from {
+        background-color: black;
+        opacity: 0;
+        width: 0px;
+    }
+
+    to {
+        background-color: rgb(79, 16, 120);
+        opacity: 1;
+        width: calc(100% - var(--menu-width) - 13px);
+    }
+}</pre>
+</div>
+
+<div class="slides-section">
+    <h2>Code - Defining the subject</h2>
+    <pre>
+.my-selected-element {
+    scroll-timeline-name: --page;
+}</pre>
+
+    <h2>Code - Defining the scroller</h2>
+    <pre>
+.progress-hover {
+    height: 3px;
+    position: fixed;
+    left: var(--menu-width);
+    animation-name: bar-grow;
+    animation-timeline: --page;
+    animation-timing-function: linear;
+}        </pre>
 </div>
