@@ -21,27 +21,16 @@ scrollbased-anim {
     }
 }
 
-
-
-.scroll-port {
+.content-port {
     width: 300px;
     height: 200px;
+    overflow-y: scroll;
 
-    .content-port {
-        position: relative;
-        height: 190px;
-        overflow-y: scroll;
+    .animated-block {
+        height: 400px;
 
-        .animated-block {
-            height: 400px;
-
-            animation-timeline: scroll(nearest block);
-            animation-name: bar-grow;
-            animation-timing-function: linear;
-        }
-
-        .content {
-            height: 1000px;
-        }
+        animation-name: bar-grow;
+        animation-timeline: scroll(nearest block);
+        animation-timing-function: linear;
     }
 }

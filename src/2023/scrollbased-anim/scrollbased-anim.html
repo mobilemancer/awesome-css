@@ -22,11 +22,51 @@
 </div>
 
 <div class="slides-section">
+    <h2>Code - Animation</h2>
+    <pre>
+@keyframes bar-grow {
+    from {
+        background-color: purple;
+        transform: scaleX(0);
+    }
 
-    <div class="scroll-port">
+    to {
+        background-color: hotpink;
+        transform: scaleX(1);
+    }
+}
+</pre>
+</div>
+
+<div class="slides-section">
+    <h2>Code - Setup</h2>
+    <pre>
+.content-port {
+    width: 300px;
+    height: 200px;
+    overflow-y: scroll;
+
+    .animated-block {
+        height: 400px;
+
+        animation-name: bar-grow;
+        animation-timeline: scroll(nearest block);
+        animation-timing-function: linear;
+    }
+}</pre>
+</div>
+
+<div class="slides-section">
+    <h2>Code - Markup</h2>
+    <xmp>
         <div class="content-port">
             <div class="animated-block"></div>
         </div>
+    </xmp>
+
+    <h2>Result</h2>
+    <div class="content-port">
+        <div class="animated-block"></div>
     </div>
 
 </div>
