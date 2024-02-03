@@ -21,15 +21,54 @@ my-app {
   height: 100dvh;
   overflow: hidden;
 
+  nav {
+    font-size: initial;
+    background-color: black;
+
+    display: flex;
+    flex-direction: column;
+    height: 100dvh;
+
+    transition: all 0.5s ease-in-out;
+
+    a {
+      padding: 10px;
+      text-decoration: none;
+      color: black;
+    }
+
+    a:hover {
+      background-color: darkgray;
+    }
+
+    .active {
+      background-color: black;
+      color: black;
+      text-shadow: 0 0 10px hotpink, 0 0 20px hotpink, 0 0 30px hotpink, 0 0 40px hotpink;
+    }
+  }
+
+  nav:hover {
+    color: black;
+    background-color: rgb(196, 178, 212);
+    text-shadow: none;
+  }
+
   & au-viewport {
     height: 100dvh;
   }
+
+  h2 {
+    margin-bottom: 0.3rem;
+  }
+
+  p {
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+  }
 }
 
-p {
-  margin-block-start: 0.5em;
-  margin-block-end: 0.5em;
-}
+
 
 .slides-section {
   scroll-snap-align: start;
@@ -80,26 +119,7 @@ p {
   }
 }
 
-nav {
-  background: #eee;
-  display: flex;
-  flex-direction: column;
-  height: 100dvh;
-}
 
-a {
-  padding: 10px;
-  text-decoration: none;
-  color: black;
-}
-
-a:hover {
-  background-color: darkgray;
-}
-
-.active {
-  background-color: lightgray;
-}
 
 pre {
   width: fit-content;

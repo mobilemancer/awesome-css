@@ -56,6 +56,6 @@ scrollbased-anim {
     to {
         background-color: rgb(79, 16, 120);
         opacity: 1;
-        width: calc(100% - var(--menu-width) - 13px);
+        width: calc(100% - var(--menu-width) - 15px);
     }
 }

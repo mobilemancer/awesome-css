@@ -1,2 +1,1 @@
-export class MyApp {
-}
+export class MyApp { }
