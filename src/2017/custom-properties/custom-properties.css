@@ -1,0 +1,27 @@
+custom-properties {
+    display: block;
+    overflow-y: scroll;
+    height: 100dvh;
+    padding-right: 20px;
+    scroll-snap-type: y mandatory;
+
+    .box {
+        width: 300px;
+        height: 300px;
+        margin: auto;
+        background-color: var(--color);
+        box-shadow: var(--shadow);
+    }
+}
+
+:root {
+    --color: purple;
+    --shadow: 10px 10px 5px rgb(57, 4, 57);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color: rgb(54, 0, 98);
+        --shadow: 10px 10px 25px rgb(217, 2, 217);
+    }
+}

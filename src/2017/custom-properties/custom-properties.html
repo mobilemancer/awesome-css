@@ -1,0 +1,59 @@
+<div class="slides-section">
+    <h1>Custom Properties (CSS Variables)</h1>
+    <available-usable date="2017" url="https://caniuse.com/css-variables"></available-usable>
+
+    <section class="bullets">
+        <p>📝 Declaration: CSS custom properties start with <code>--</code></p>
+        <p>🎨 Usage: Use <code>var()</code> to access them</p>
+        <p>💡 Benefits: They keep code DRY, great for themes</p>
+        <p>🌍 Scope: They're scoped to where they're declared. Use <code>:root</code> for global access</p>
+        <p>⚠️ Limitations: They can't be used to define media queries or container queries</p>
+    </section>
+</div>
+
+<div class="slides-section">
+    <h2>Code</h2>
+    <pre>
+        :root {
+            --color: purple;
+            --shadow: 10px 10px 5px rgb(57, 4, 57);
+        }
+        .box {
+            width: 300px;
+            height: 300px;
+            margin: auto;
+            background-color: var(--color);
+            box-shadow: var(--shadow);
+        }
+    </pre>
+    <xmp>
+        <div class="box"></div>
+    </xmp>
+</div>
+
+<div class="slides-section">
+    <h2>Result</h2>
+    <div class="box"></div>
+</div>
+
+<div class="slides-section">
+    <h2>Code - Themes</h2>
+    <pre>
+        :root {
+            --color: purple;
+            --shadow: 10px 10px 5px rgb(57, 4, 57);
+        }
+        
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --color: rgb(54, 0, 98);
+                --shadow: 10px 10px 25px rgb(217, 2, 217);
+            }
+        }
+    </pre>
+</div>
+
+<div class="slides-section">
+    <h2>Result</h2>
+    <div class="box"></div>
+</div>

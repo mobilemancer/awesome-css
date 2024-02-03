@@ -21,6 +21,14 @@ my-app {
   height: 100dvh;
   overflow: hidden;
 
+  code {
+    background-color: #9400d350;
+
+    padding: 3px 5px;
+    border-radius: 5px;
+    border: 1px solid darkviolet;
+  }
+
   nav {
     font-size: initial;
     background-color: black;
@@ -116,6 +124,7 @@ my-app {
     justify-content: center;
     margin-left: 2rem;
     margin-right: 2rem;
+    line-height: 1.7rem;
   }
 }
 
