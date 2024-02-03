@@ -5,7 +5,7 @@
 html {
   background-color: black;
   color: beige;
-  font-size: 20px;
+  font-size: 26px;
 }
 
 body {
@@ -24,6 +24,11 @@ my-app {
   & au-viewport {
     height: 100dvh;
   }
+}
+
+p {
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
 }
 
 .slides-section {
@@ -65,10 +70,13 @@ my-app {
 
 .slides-section {
   .bullets {
+    font-size: larger;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-left: 2rem;
+    margin-right: 2rem;
   }
 }
 
