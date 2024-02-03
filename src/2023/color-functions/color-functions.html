@@ -1,2 +1,64 @@
-<h1>Color Functions</h1>
-<img src="UC3.jpg" alt="" />
+<div class="slides-section">
+    <h1>Color Functions</h1>
+    <available-usable date="2024" url="https://caniuse.com/css-color-function"></available-usable>
+
+    <div class="bullets">
+        <p> 🎨 The color() function allows you to specify colors in different color spaces</p>
+        <p> 📝 Syntax: color(colorspace c1 c2 c3 [ / A])</p>
+        <p> 🌈 Predefined colorspaces include srgb, srgb-linear, display-p3, a98-rgb, prophoto-rgb, rec2020, xyz,
+            xyz-d50,
+            and xyz-d65</p>
+        <p> 🎚️ c1, c2, c3 are the component values in the color space</p>
+        <p> 👻 A is an optional alpha-value</p>
+        <p> 🖥️ The way these colors are displayed can depend on several factors, including the monitor’s color depth,
+            settings, and color profile </p>
+    </div>
+</div>
+
+<div class="slides-section">
+    <h2>Code</h2>
+    <pre>
+.red-a98-rgb {
+    background-color: color(a98-rgb 1 0 0);
+}
+.red-prophoto-rgb {
+    background-color: color(prophoto-rgb 1 0 0);
+}
+.green-srgb-linear {
+    background-color: color(srgb-linear 0 1 0);
+}
+.green-display-p3 {
+    background-color: color(display-p3 0 1 0);
+}
+.blue-rec2020 {
+    background-color: color(rec2020 0 0 1);
+}
+.blue-srgb {
+    background-color: color(srgb 0 0 1);
+}</pre>
+</div>
+
+
+<div class="slides-section">
+    <h2>Result</h2>
+    <div class="grid">
+        <div class="box red-rgb-color">rgb</div>
+        <div class="box red-a98-rgb">a98-rgb</div>
+
+        <div class="box red-rgb-color">rgb</div>
+        <div class="box red-prophoto-rgb">prophoto-rgb</div>
+
+        <div class="box green-rgb-color">rgb</div>
+        <div class="box green-srgb-linear">srgb-linear</div>
+
+        <div class="box green-rgb-color">rgb</div>
+        <div class="box green-display-p3 ">display-p3</div>
+
+        <div class="box blue-rgb-color">rgb</div>
+        <div class="box blue-rec2020">rec2020</div>
+
+        <div class="box blue-rgb-color">rgb</div>
+        <div class="box blue-srgb">srgb</div>
+    </div>
+
+</div>
