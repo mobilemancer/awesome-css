@@ -30,6 +30,13 @@ body {
   font-family: sans-serif;
 }
 
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Russo One', sans-serif;
+}
+
 my-app {
   display: grid;
   grid-template-columns: var(--menu-width) 1fr;
@@ -147,6 +154,13 @@ my-app {
     margin-left: 2rem;
     margin-right: 2rem;
     line-height: 1.7rem;
+  }
+
+  .center {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
   }
 }
 

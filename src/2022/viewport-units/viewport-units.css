@@ -2,7 +2,6 @@ viewport-units {
     display: block;
     overflow-y: scroll;
     height: 100dvh;
-    padding-right: 20px;
     scroll-snap-type: y mandatory;
 
     & img {
