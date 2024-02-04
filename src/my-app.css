@@ -2,6 +2,23 @@
   --menu-width: 200px;
 }
 
+/* Scrollbar styling */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: purple;
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+}
+
 html {
   background-color: black;
   color: beige;
@@ -30,38 +47,51 @@ my-app {
   }
 
   nav {
+    direction: rtl;
     font-size: initial;
     background-color: black;
-
     display: flex;
     flex-direction: column;
     height: 100dvh;
+    overflow-y: auto;
 
     transition: all 0.5s ease-in-out;
 
-    a {
-      padding: 10px;
-      text-decoration: none;
-      color: black;
-      transition: all 0.5s ease-in-out;
-    }
+    .content {
+      direction: ltr;
 
-    a:hover {
-      /* background-color: darkgray; */
-      text-shadow: 0 0 10px purple, 0 0 20px purple, 0 0 30px purple, 0 0 40px purple;
-    }
+      h4 {
+        color: black;
+        margin-bottom: 0.2rem;
+      }
 
-    .active {
-      background-color: black;
-      color: black;
-      text-shadow: 0 0 10px hotpink, 0 0 20px hotpink, 0 0 30px hotpink, 0 0 40px hotpink;
+      a {
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+        color: black;
+        transition: all 0.5s ease-in-out;
+      }
+
+      a:hover {
+        text-shadow: 0 0 10px purple, 0 0 20px purple, 0 0 30px purple, 0 0 40px purple;
+      }
+
+      a.active {
+        color: black;
+        background-color: black;
+        text-shadow: 0 0 10px hotpink, 0 0 20px hotpink, 0 0 30px hotpink, 0 0 40px hotpink;
+      }
     }
   }
 
   nav:hover {
     color: white;
-    /* background-color: rgb(196, 178, 212); */
     text-shadow: none;
+
+    h4 {
+      color: white;
+    }
 
     a {
       color: grey;

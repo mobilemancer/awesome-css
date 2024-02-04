@@ -10,6 +10,17 @@ intro-page {
         margin: 1rem 3rem;
     }
 
+    .glow {
+
+        /* gradient */
+        background: linear-gradient(to right, rgb(79, 17, 141), rgb(171, 31, 101));
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        width: fit-content;
+
+    }
+
     img.main-image {
         height: 70%;
         width: 80%;
@@ -35,5 +46,22 @@ intro-page {
             padding-right: 40px;
             width: 60%;
         }
+    }
+
+    ul {
+        list-style-type: none;
+    }
+
+    ul li {
+        display: flex;
+        align-items: center;
+    }
+
+    ;
+
+    ul li::before {
+        font-size: 0.5rem;
+        content: "💜";
+        margin-right: 10px;
     }
 }
