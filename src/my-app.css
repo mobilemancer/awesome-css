@@ -76,6 +76,10 @@ my-app {
     margin-bottom: 0.3rem;
   }
 
+  h3 {
+    margin-bottom: 0.3rem;
+  }
+
   p {
     margin-top: 0.3em;
     margin-bottom: 0.3em;
@@ -100,24 +104,6 @@ my-app {
     height: 80%;
     width: 80%;
     object-fit: contain;
-  }
-
-  .side-by-side {
-    display: flex;
-    flex-direction: row;
-    height: 70%;
-
-    img {
-      width: 50%;
-    }
-
-    .tall {
-      height: 70%;
-    }
-
-    .wide {
-      width: 70%;
-    }
   }
 }
 

@@ -3,4 +3,37 @@ intro-page {
     overflow-x: hidden;
     height: 100dvh;
     scroll-snap-type: y mandatory;
+
+    h1.main {
+        text-align: center;
+        text-wrap: balance;
+        margin: 1rem 3rem;
+    }
+
+    img.main-image {
+        height: 70%;
+        width: 80%;
+        margin: 10px;
+        object-fit: contain;
+        align-self: center;
+    }
+
+    .side-by-side {
+        display: flex;
+        flex-direction: row;
+        height: 70%;
+
+        img {
+            width: 50%;
+        }
+
+        .tall {
+            height: 70%;
+        }
+
+        .wide {
+            padding-right: 40px;
+            width: 60%;
+        }
+    }
 }
