@@ -5,12 +5,12 @@ export * from "./missing-page";
 export * from "./components/available-usable";
 
 export * from "./2017/custom-properties/custom-properties";
+export * from "./2017/grid/grid-page";
 
 export * from "./2022/viewport-units/viewport-units";
 export * from "./2022/flex-gap/flex-gap";
 
 export * from "./2023/container-queries/container-queries";
-export * from "./2023/grid/grid-page";
 export * from "./2023/css-nesting/css-nesting";
 export * from "./2023/container-queries/container-queries";
 export * from "./2023/has-selector/has-selector";

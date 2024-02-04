@@ -5,10 +5,6 @@ scrollbased-anim {
     overflow-x: hidden;
     height: 100dvh;
     scroll-snap-type: y mandatory;
-
-    img {
-        height: 95%;
-    }
 }
 
 @keyframes block-grow {
