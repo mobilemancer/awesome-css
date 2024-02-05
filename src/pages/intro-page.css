@@ -10,15 +10,12 @@ intro-page {
         margin: 1rem 3rem;
     }
 
-    .glow {
-
-        /* gradient */
+    .gradient {
         background: linear-gradient(to right, rgb(79, 17, 141), rgb(171, 31, 101));
         -webkit-background-clip: text;
         background-clip: text;
         -webkit-text-fill-color: transparent;
         width: fit-content;
-
     }
 
     img.main-image {
@@ -64,4 +61,29 @@ intro-page {
         content: "💜";
         margin-right: 10px;
     }
+
+    .center-div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        font-size: 5rem;
+        height: 100dvh;
+    }
+
+    .center-div {
+        h1 {
+            position: absolute;
+            margin: 0;
+            z-index: 1;
+
+            font-variant-caps: petite-caps;
+            text-shadow: 10px 10px 15px #500877, -2px -2px 5px #890668;
+        }
+
+        .emoji {
+            font-size: 22rem;
+        }
+    }
+
 }
