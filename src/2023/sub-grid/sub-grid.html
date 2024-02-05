@@ -1,2 +1,67 @@
-<h1>Subgrid</h1>
-<img src="UC1.jpg" alt="" />
+<div class="slides-section">
+    <h1>Subgrid</h1>
+    <available-usable date="2023" url="https://caniuse.com/css-subgrid"></available-usable>
+
+    <section class="bullets">
+        <p>📦 Subgrid is a feature of the CSS Grid Layout Module</p>
+        <p>📏 It allows a grid item to become a grid container and define its own grid</p>
+        <p>🔗 It inherits the grid definition from its parent grid</p>
+        <p>📐 It aligns the grid lines of the subgrid with the parent grid</p>
+    </section>
+</div>
+
+<div class="slides-section">
+    <h1>Visualization</h1>
+    <div class="bullets">
+        <p>"16 boxes, stacked 4 vertical, 4 horizontal, whereof the 4 in the lower right corner are purple and glowing"
+        </p>
+    </div>
+</div>
+
+<div class="slides-section">
+    <div class="bullets">
+        <img src="OIG3.jpg" alt="">
+    </div>
+</div>
+
+<div class="slides-section">
+    <div class="bullets">
+        <img src="OIG2.jpg" alt="">
+    </div>
+</div>
+
+<div class="slides-section">
+    <div class="bullets">
+        <img src="OIG2-modified.webp" alt="">
+    </div>
+</div>
+
+
+<div class="slides-section">
+    <h2>Code</h2>
+    <!-- A demo of subgrid -->
+    <div class="subgrid-demo">
+        <div class="subgrid-container">
+            <div class="subgrid-item">1</div>
+            <div class="subgrid-item">2</div>
+            <div class="subgrid-item">3</div>
+            <div class="subgrid-item">4</div>
+            <div class="subgrid-item">5</div>
+            <div class="subgrid-item">6</div>
+            <div class="subgrid-item">7</div>
+            <div class="subgrid-item">8</div>
+            <div class="subgrid-item">9</div>
+        </div>
+
+        <!-- it has the following css -->
+        <pre>
+.subgrid-container {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid #000;
+}
+
+</div>
