@@ -11,15 +11,17 @@ viewport-units {
     footer {
         margin-top: auto;
         padding-bottom: 1rem;
+
+        a {
+            color: hotpink;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            background-color: inherit;
+        }
     }
 
-    & a {
-        color: hotpink;
-        text-decoration: none;
-    }
 
-    & a:hover {
-        text-decoration: underline;
-        background-color: inherit;
-    }
 }

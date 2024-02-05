@@ -20,7 +20,7 @@ container-queries {
 }
 
 .card {
-    & h2 {
+    h2 {
         color: white;
     }
 
@@ -38,10 +38,6 @@ container-queries {
 }
 
 @container (max-width: 800px) {
-    .big {
-        width: 30%;
-    }
-
     .card {
         h2 {
             font-size: 1em;
@@ -50,5 +46,9 @@ container-queries {
         .info {
             display: none;
         }
+    }
+
+    .big {
+        width: 30%;
     }
 }

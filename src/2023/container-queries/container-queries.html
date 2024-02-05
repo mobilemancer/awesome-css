@@ -15,14 +15,73 @@
 
   <h2>Usage</h2>
 
-  <p>Define a parent container with a <em>Contianment Context</em>.</p>
+  <section class="center">
+    <p>Define a parent container with a <em>Contianment Context</em>.</p>
 
-  <pre>
+    <pre>
 .parent-container  {
   container-type: size | inline-size | normal;
 }</pre>
+  </section>
+</div>
 
-  <pre>
+<div class="slides-section">
+  <h2>Code - Cards</h2>
+  <section class="center">
+    <pre>
+  .card-container {
+    container-type: inline-size;
+  }
+  
+  .card {
+    h2 {
+        color: white;
+    }
+
+    width: 30%;
+    color: white;
+    background-color: hotpink;
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .big {
+      width: 60%;
+      background-color: purple;
+  }</pre>
+  </section>
+</div>
+
+<div class="slides-section">
+  <h2>Code - Markup</h2>
+  <section class="center">
+    <xmp>
+      <div class="card-container">
+        <section class="card">
+          <h2>Card</h2>
+          <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+          <p class="info"> Quisquam voluptatum, quibusdam, quia... </p>
+        </section>
+
+        <section class="card big">
+          <h2>Card Big</h2>
+          <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+          <p class="info"> Quisquam voluptatum, quibusdam, quia... </p>
+        </section>
+        ...
+        ...
+        ...
+      </div>
+    </xmp>
+  </section>
+
+</div>
+
+<div class="slides-section">
+  <h2>Code - Container query</h2>
+  <section class="center">
+    <pre>
 @container (max-width: 800px) {
   .big {
       width: 30%;
@@ -39,8 +98,7 @@
   }
 }
 </pre>
-
-
+  </section>
 </div>
 
 <div class="slides-section">
@@ -89,7 +147,7 @@
             quod exercitationem quos voluptatibus quas doloribus. </p>
         </section>
 
-        <section class="card big">
+        <section class="card">
           <h2>Card Big</h2>
           <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
           <p class="info"> Quisquam voluptatum, quibusdam, quia, quae voluptatem voluptas

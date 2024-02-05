@@ -14,8 +14,8 @@
 
 <div class="slides-section">
   <h2>Code - Basic Grid</h2>
-
-  <pre>
+  <section class="center">
+    <pre>
   .container {
     background-color: coral;
     display: grid;
@@ -23,7 +23,21 @@
     grid-template-columns: repeat(3, 1fr);
   }
 </pre>
-  <xmp>
+    <xmp>
+      <section class="container">
+        <div class="item">Hello 1</div>
+        <div class="item">Hello 2</div>
+        <div class="item">Hello 3</div>
+        <div class="item">Hello 4</div>
+        <div class="item">Hello 5</div>
+      </section>
+    </xmp>
+  </section>
+</div>
+
+<div class="slides-section">
+  <h2>Result</h2>
+  <section class="center">
     <section class="container">
       <div class="item">Hello 1</div>
       <div class="item">Hello 2</div>
@@ -31,59 +45,58 @@
       <div class="item">Hello 4</div>
       <div class="item">Hello 5</div>
     </section>
-  </xmp>
-</div>
-
-<div class="slides-section">
-  <h2>Result</h2>
-  <section class="container">
-    <div class="item">Hello 1</div>
-    <div class="item">Hello 2</div>
-    <div class="item">Hello 3</div>
-    <div class="item">Hello 4</div>
-    <div class="item">Hello 5</div>
   </section>
 </div>
 
 <div class="slides-section">
 
   <h2>Code - Creating a Grid Using Named Areas</h2>
-
-  <pre>
+  <section class="center">
+    <pre>
   .named-container {
     background-color: green;
     display: grid;
-    gap: 20px 0px;
-    grid-template-areas: "header header header" "left main sidebar" "footer footer footer";
+    gap: 20px;
+    grid-template-areas: "header header header"
+                         "left main sidebar"
+                         "footer footer footer";
+  }
 
-    .item1 {
-        background-color: violet;
-        grid-area: header;
-    }
+  .item1 {
+      background-color: violet;
+      grid-area: header;
+  }
 
-    .item2 {
-        grid-area: left;
-    }
-
-    .item3 {
-        grid-area: main;
-    }
-
-    .item4 {
-        grid-area: sidebar;
-    }
-
-    .item5 {
-        background-color: violet;
-        grid-area: footer;
-    }
+  .item2 {
+      grid-area: left;
   }
 </pre>
+  </section>
+</div>
 
-  <div class="slides-section">
-  </div>
+<div class="slides-section">
+  <h2>Named Areas - Cont...</h2>
+  <section class="center">
+    <pre>
+      .item3 {
+        grid-area: main;
+      }
 
-  <div class="slides-section">
+      .item4 {
+          grid-area: sidebar;
+      }
+
+      .item5 {
+          background-color: violet;
+          grid-area: footer;
+      }
+      </pre>
+  </section>
+</div>
+
+<div class="slides-section">
+  <h2>Code - Markup for named areas</h2>
+  <section class="center">
     <xmp>
       <section class="named-container">
         <div class="item item5">Footer</div>
@@ -93,10 +106,12 @@
         <div class="item item1">Header</div>
       </section>
     </xmp>
-  </div>
+  </section>
+</div>
 
-  <div class="slides-section">
-
+<div class="slides-section">
+  <h2>Result</h2>
+  <section class="center">
     <section class="named-container">
       <div class="item item5">Footer</div>
       <div class="item item4">Right side</div>
@@ -104,11 +119,12 @@
       <div class="item item2">Left side</div>
       <div class="item item1">Header</div>
     </section>
-  </div>
+  </section>
+</div>
 
-  <div class="slides-section">
-
-    <h2>"Dynamic" Grid</h2>
+<div class="slides-section">
+  <h2>"Dynamic" Grid</h2>
+  <section class="center">
     <p>
       Possible to use @media or @container querries to modify the grid to make it
       responsive
@@ -129,12 +145,16 @@
   }
 }
 </pre>
+  </section>
+</div>
 
-    <section class="query-container">
-      <div class="item item5">Footer</div>
-      <div class="item item4">Right side</div>
-      <div class="item item3">Middle</div>
-      <div class="item item2">Left side</div>
-      <div class="item item1">Header</div>
-    </section>
-  </div>
+<div class="slides-section">
+  <h2>Result</h2>
+  <section class="query-container">
+    <div class="item item5">Footer</div>
+    <div class="item item4">Right side</div>
+    <div class="item item3">Middle</div>
+    <div class="item item2">Left side</div>
+    <div class="item item1">Header</div>
+  </section>
+</div>

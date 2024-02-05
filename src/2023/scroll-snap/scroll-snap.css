@@ -20,19 +20,19 @@ scroll-snap {
         font-size: 50px;
     }
 
-    .center {
+    .center-align {
         scroll-snap-align: center;
     }
 
-    .top {
+    .top-align {
         scroll-snap-align: start;
     }
 
-    .bottom {
+    .bottom-align {
         scroll-snap-align: end;
     }
 
-    .none {
+    .none-align {
         scroll-snap-align: none;
     }
 }

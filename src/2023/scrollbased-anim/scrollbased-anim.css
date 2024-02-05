@@ -39,7 +39,7 @@ scrollbased-anim {
     left: var(--menu-width);
     animation-name: bar-grow;
     animation-timeline: --page;
-    animation-timing-function: linear;
+    animation-timing-function: ease-in;
 }
 
 @keyframes bar-grow {

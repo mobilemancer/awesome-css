@@ -24,7 +24,8 @@ animation-timeline: scroll(root | nearest | self block | inline | x | y);    </p
 
 <div class="slides-section">
     <h2>Code - Setup animation with @keyframes</h2>
-    <pre>
+    <section class="center">
+        <pre>
 @keyframes block-grow {
     from {
         background-color: purple;
@@ -37,11 +38,13 @@ animation-timeline: scroll(root | nearest | self block | inline | x | y);    </p
     }
 }
 </pre>
+    </section>
 </div>
 
 <div class="slides-section">
-    <h2>Code - Setup</h2>
-    <pre>
+    <h2>Code - Setup animation timeline</h2>
+    <section class="center">
+        <pre>
 .content-port {
     width: 300px;
     height: 200px;
@@ -55,6 +58,7 @@ animation-timeline: scroll(root | nearest | self block | inline | x | y);    </p
         animation-timing-function: linear;
     }
 }</pre>
+    </section>
 </div>
 
 <div class="slides-section">
@@ -88,7 +92,8 @@ animation-timeline: scroll(root | nearest | self block | inline | x | y);    </p
 
 <div class="slides-section">
     <h2>Code - Animation Setup</h2>
-    <pre>
+    <section class="center">
+        <pre>
 @keyframes bar-grow {
     from {
         background-color: black;
@@ -99,9 +104,10 @@ animation-timeline: scroll(root | nearest | self block | inline | x | y);    </p
     to {
         background-color: rgb(79, 16, 120);
         opacity: 1;
-        width: calc(100% - var(--menu-width) - 13px);
+        width: calc(100% - var(--menu-width));
     }
 }</pre>
+    </section>
 </div>
 
 <div class="slides-section">
@@ -121,4 +127,6 @@ animation-timeline: scroll(root | nearest | self block | inline | x | y);    </p
     animation-timeline: --page;
     animation-timing-function: linear;
 }        </pre>
+
+    <h2>Result ⤴️</h2>
 </div>

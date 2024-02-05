@@ -8,6 +8,7 @@ grid-page {
 }
 
 .container {
+    width: 95%;
     background-color: coral;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -22,9 +23,11 @@ grid-page {
 }
 
 .named-container {
+    width: 95%;
+
     background-color: green;
     display: grid;
-    gap: 20px 0px;
+    gap: 20px;
     grid-template-areas: "header header header" "left main sidebar" "footer footer footer";
 
     .item1 {
@@ -55,6 +58,8 @@ grid-page {
     display: grid;
     gap: 20px;
     grid-template-areas: "header header header" "left-side main sidebar" "footer footer footer";
+
+    width: 95%;
 
     .item1 {
         background-color: violet;

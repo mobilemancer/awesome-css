@@ -12,49 +12,51 @@
 
 <div class="slides-section">
   <h2>Code - Using :has to select elements</h2>
+  <section class="center">
+    <p>CSS to select H2 with following div</p>
 
-  <p>CSS to select H2 with following div</p>
-
-  <pre>
+    <pre>
     h2:has(+ div) {
       color: purple;
       margin-bottom: 0.5rem;
     }
 </pre>
 
-  <xmp>
-    <h2>H2 Heading</h2>
-    <p>Lorem, ipsum...</p>
+    <xmp>
+      <h2>H2 Heading</h2>
+      <p>Lorem, ipsum...</p>
 
-    <h3>H3 Heading</h3>
-    <div>Lorem, ipsum...</div>
+      <h3>H3 Heading</h3>
+      <div>Lorem, ipsum...</div>
 
-    <h2>H2 Heading</h2>
-    <div>Lorem, ipsum...</div>
-  </xmp>
-
+      <h2>H2 Heading</h2>
+      <div>Lorem, ipsum...</div>
+    </xmp>
+  </section>
 </div>
 
 <div class="slides-section">
   <h2>Result - Select the h2 being adjacent to a div</h2>
-  <h2>H2 Heading</h2>
-  <p>
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi
-    consectetur amet vel ea. Voluptas eveniet odio minus corporis velit suscipit,
-    a quia asperiores deserunt voluptates itaque autem ad alias neque?
-  </p>
+  <section class="center">
+    <h2>H2 Heading</h2>
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi
+      consectetur amet vel ea. Voluptas eveniet odio minus corporis velit suscipit,
+      a quia asperiores deserunt voluptates itaque autem ad alias neque?
+    </p>
 
-  <h3>H3 Heading</h3>
-  <div>
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi
-    consectetur amet vel ea. Voluptas eveniet odio minus corporis velit suscipit,
-    a quia asperiores deserunt voluptates itaque autem ad alias neque?
-  </div>
+    <h3>H3 Heading</h3>
+    <div>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi
+      consectetur amet vel ea. Voluptas eveniet odio minus corporis velit suscipit,
+      a quia asperiores deserunt voluptates itaque autem ad alias neque?
+    </div>
 
-  <h2>H2 Heading</h2>
-  <div>
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi
-    consectetur amet vel ea. Voluptas eveniet odio minus corporis velit suscipit,
-    a quia asperiores deserunt voluptates itaque autem ad alias neque?
-  </div>
+    <h2>H2 Heading</h2>
+    <div>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi
+      consectetur amet vel ea. Voluptas eveniet odio minus corporis velit suscipit,
+      a quia asperiores deserunt voluptates itaque autem ad alias neque?
+    </div>
+  </section>
 </div>
