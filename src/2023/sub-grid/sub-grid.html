@@ -37,32 +37,71 @@
     </div>
 </div>
 
+<div class="slides-section">
+    <h2>Code - Markup</h2>
+    <section class="center">
+        <xmp>
+            <div class="grid-container">
+                <div class="grid-item">1</div>
+                <div class="grid-item">2</div>
+                <div class="grid-item">3</div>
+                <div class="grid-item">4</div>
+                <div class="grid-item">5</div>
+                <div class="subgrid-container">
+                    <div class="grid-item">J</div>
+                    <div class="grid-item">P</div>
+                    <div class="grid-item">F</div>
+                    <div class="grid-item">C</div>
+                </div>
+            </div>
+        </xmp>
+    </section>
+</div>
 
 <div class="slides-section">
-    <h2>Code</h2>
-    <!-- A demo of subgrid -->
-    <div class="subgrid-demo">
-        <div class="subgrid-container">
-            <div class="subgrid-item">1</div>
-            <div class="subgrid-item">2</div>
-            <div class="subgrid-item">3</div>
-            <div class="subgrid-item">4</div>
-            <div class="subgrid-item">5</div>
-            <div class="subgrid-item">6</div>
-            <div class="subgrid-item">7</div>
-            <div class="subgrid-item">8</div>
-            <div class="subgrid-item">9</div>
-        </div>
-
-        <!-- it has the following css -->
+    <h2>Code - CSS</h2>
+    <section class="center">
         <pre>
-.subgrid-container {
+            .grid-container {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+                gap: 1rem;
+        
+                .grid-item {
+                    height: 9rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: blueviolet; }
+        
+                .subgrid-container {
+                    display: grid;
+                    grid-column: 2 / span 2;
+                    grid-row: 2 / span 2;
+                    grid-template-columns: subgrid;
+                    grid-template-rows: subgrid;
+        
+                    .grid-item {
+                        background-color: indigo;
+                        box-shadow: 5px 5px 15px purple;  } } }        </pre>
+    </section>
+</div>
 
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 10px;
-    padding: 10px;
-    border: 1px solid #000;
-}
+<div class="slides-section">
+    <h2>Result</h2>
+    <div class="grid-container">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="subgrid-container">
+            <div class="grid-item">J</div>
+            <div class="grid-item">P</div>
+            <div class="grid-item">F</div>
+            <div class="grid-item">C</div>
+        </div>
+    </div>
 
 </div>

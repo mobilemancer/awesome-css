@@ -4,7 +4,32 @@ sub-grid {
     height: 100dvh;
     scroll-snap-type: y mandatory;
 
-    img {
-        height: 90%;
+    .grid-container {
+        margin-right: 1rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 1rem;
+
+        .grid-item {
+            height: 9rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: blueviolet;
+        }
+
+        .subgrid-container {
+            display: grid;
+            grid-column: 2 / span 2;
+            grid-row: 2 / span 2;
+            grid-template-columns: subgrid;
+            grid-template-rows: subgrid;
+
+            .grid-item {
+                background-color: indigo;
+                box-shadow: 5px 5px 15px purple;
+            }
+        }
     }
 }
