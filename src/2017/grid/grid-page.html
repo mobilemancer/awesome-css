@@ -15,14 +15,30 @@
 <div class="slides-section">
   <h2>Code - Basic Grid</h2>
   <section class="center">
+
     <pre>
-  .container {
-    background-color: coral;
-    display: grid;
-    gap: 20px;
-    grid-template-columns: repeat(3, 1fr);
-  }
+      .container {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: 100px 200px 50px;
+        grid-template-rows: 100px 100px 200px;
+      }
 </pre>
+
+    <p>Alt...</p>
+    <pre>
+      .container {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(3, 1fr);
+      }
+</pre>
+  </section>
+</div>
+
+<div class="slides-section">
+  <h2>Code - Markup</h2>
+  <section class="center">
     <xmp>
       <section class="container">
         <div class="item">Hello 1</div>
@@ -30,6 +46,8 @@
         <div class="item">Hello 3</div>
         <div class="item">Hello 4</div>
         <div class="item">Hello 5</div>
+        <div class="item">Hello 6</div>
+        <div class="item">Hello 7</div>
       </section>
     </xmp>
   </section>
@@ -44,12 +62,13 @@
       <div class="item">Hello 3</div>
       <div class="item">Hello 4</div>
       <div class="item">Hello 5</div>
+      <div class="item">Hello 6</div>
+      <div class="item">Hello 7</div>
     </section>
   </section>
 </div>
 
 <div class="slides-section">
-
   <h2>Code - Creating a Grid Using Named Areas</h2>
   <section class="center">
     <pre>
@@ -62,35 +81,37 @@
                          "footer footer footer";
   }
 
-  .item1 {
-      background-color: violet;
-      grid-area: header;
-  }
-
-  .item2 {
-      grid-area: left;
-  }
 </pre>
   </section>
 </div>
 
 <div class="slides-section">
-  <h2>Named Areas - Cont...</h2>
+  <h2>Code - Named Areas, Items...</h2>
   <section class="center">
     <pre>
-      .item3 {
-        grid-area: main;
-      }
 
-      .item4 {
-          grid-area: sidebar;
-      }
+  .item1 {
+    background-color: violet;
+    grid-area: header;
+  }
 
-      .item5 {
-          background-color: violet;
-          grid-area: footer;
-      }
-      </pre>
+  .item2 {
+    grid-area: left;
+  } 
+
+  .item3 {
+    grid-area: main;
+  }
+
+  .item4 {
+    grid-area: sidebar;
+  }
+
+  .item5 {
+    background-color: violet;
+    grid-area: footer;
+  }
+    </pre>
   </section>
 </div>
 
@@ -123,15 +144,17 @@
 </div>
 
 <div class="slides-section">
+  <h2>Using lines to position items</h2>
+  <!-- TODO! -->
+</div>
+
+<div class="slides-section">
   <h2>"Dynamic" Grid</h2>
   <section class="center">
-    <p>
-      Possible to use @media or @container querries to modify the grid to make it
-      responsive
-    </p>
+    <p> Use @media or @container querries to modify the grid to make it responsive </p>
 
     <pre>
-@container (max-width: 600px) {
+@container (max-width: 800px) {
   .query-container {
       grid-template-areas: "header" "main" "footer";
 
