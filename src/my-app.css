@@ -66,6 +66,9 @@ my-app {
 
     .content {
       direction: ltr;
+      display: flex;
+      flex-direction: column;
+      height: 100dvh;
 
       h4 {
         color: black;
@@ -88,6 +91,10 @@ my-app {
         color: black;
         background-color: black;
         text-shadow: 0 0 10px hotpink, 0 0 20px hotpink, 0 0 30px hotpink, 0 0 40px hotpink;
+      }
+
+      .bottom {
+        margin-top: auto;
       }
     }
   }

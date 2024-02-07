@@ -28,8 +28,6 @@
         grid-column: 1 / 2;
         grid-row: 2 / 3;
       }    </pre>
-
-    <p>Positioning items in the grid, using span</p>
     <pre>
       .item {
         grid-column: 1 / span 2;
@@ -192,7 +190,8 @@
     <pre>
       .container {
         display: grid;
-        grid-template-columns: [full-start] 100px [main-start] auto [main-end] 1fr [full-end];
+        grid-template-columns: 
+          [full-start] 100px [main-start] auto [main-end] 1fr [full-end];
         grid-template-rows: [row-start] auto [row-end];
       }
     </pre>
