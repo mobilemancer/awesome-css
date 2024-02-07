@@ -26,6 +26,14 @@ intro-page {
         align-self: center;
     }
 
+    img.butterfly {
+        position: absolute;
+        bottom: 1rem;
+        right: 2rem;
+        width: 3rem;
+        rotate: -15deg;
+    }
+
     .side-by-side {
         display: flex;
         flex-direction: row;
