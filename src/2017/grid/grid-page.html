@@ -1,6 +1,6 @@
 <div class="slides-section">
   <h1>Grid</h1>
-  <available-usable date="2017" url="https://caniuse.com/css-grid"></available-usable>
+  <available-usable date="2017-2020" url="https://caniuse.com/css-grid"></available-usable>
 
   <div class="bullets">
     <p>📏 Fixed and Flexible Track Sizes: Grids with fixed or flexible sizes</p>
@@ -15,24 +15,66 @@
 <div class="slides-section">
   <h2>Code - Basic Grid</h2>
   <section class="center">
-
     <pre>
       .container {
         display: grid;
-        gap: 20px;
         grid-template-columns: 100px 200px 50px;
         grid-template-rows: 100px 100px 200px;
+      }    </pre>
+
+    <p>Positioning items in the grid</p>
+    <pre>
+      .item {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+      }    </pre>
+
+    <p>Positioning items in the grid, using span</p>
+    <pre>
+      .item {
+        grid-column: 1 / span 2;
+        grid-row: 2 / span 2;
+      }    </pre>
+  </section>
+</div>
+
+<div class="slides-section">
+  <h2>Code - Basic Grid, using lines</h2>
+  <section class="center">
+    <pre>
+      .container {
+        display: grid;
+        grid-template-columns: [left-edge] 100px [center] 200px [right-edge];
+        grid-template-rows: [top-edge] 100px [middle] 200px [bottom-edge]; 
+      }    </pre>
+
+    <p>Positioning items in the grid</p>
+    <pre>
+      .item {
+        grid-column: left-edge / center;
+        grid-row: top-edge / bottom-edge;
+      }    </pre>
+  </section>
+</div>
+
+<div class="slides-section">
+  <h2>Code - Basic Grid, auto, fr & repeat</h2>
+  <section class="center">
+    <pre>
+      .container {
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr;
+        grid-template-rows: auto 1fr auto;
       }
-</pre>
+    </pre>
 
     <p>Alt...</p>
     <pre>
       .container {
         display: grid;
-        gap: 20px;
         grid-template-columns: repeat(3, 1fr);
       }
-</pre>
+    </pre>
   </section>
 </div>
 
@@ -73,7 +115,7 @@
   <section class="center">
     <pre>
   .named-container {
-    background-color: green;
+    background-color: purple;
     display: grid;
     gap: 20px;
     grid-template-areas: "header header header"
@@ -91,7 +133,6 @@
     <pre>
 
   .item1 {
-    background-color: violet;
     grid-area: header;
   }
 
@@ -108,7 +149,6 @@
   }
 
   .item5 {
-    background-color: violet;
     grid-area: footer;
   }
     </pre>
@@ -144,8 +184,25 @@
 </div>
 
 <div class="slides-section">
-  <h2>Using lines to position items</h2>
-  <!-- TODO! -->
+  <h2>Implicit lines</h2>
+  <p>Define matching lines with *<code>-start</code> & *<code>-end</code></p>
+  <p>Will create an area with the identifier name</p>
+
+  <section class="center">
+    <pre>
+      .container {
+        display: grid;
+        grid-template-columns: [full-start] 100px [main-start] auto [main-end] 1fr [full-end];
+        grid-template-rows: [row-start] auto [row-end];
+      }
+    </pre>
+
+    <pre>
+      .item {
+        grid-area: main;
+      }
+    </pre>
+  </section>
 </div>
 
 <div class="slides-section">

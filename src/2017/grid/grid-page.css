@@ -29,13 +29,14 @@ grid-page {
 .named-container {
     width: 95%;
 
-    background-color: green;
+    background-color: purple;
     display: grid;
     gap: 20px;
     grid-template-areas: "header header header" "left main sidebar" "footer footer footer";
 
     .item1 {
-        background-color: violet;
+        background-color: indigo;
+        color: white;
         grid-area: header;
     }
 
@@ -52,7 +53,8 @@ grid-page {
     }
 
     .item5 {
-        background-color: violet;
+        background-color: indigo;
+        color: white;
         grid-area: footer;
     }
 }
@@ -66,7 +68,8 @@ grid-page {
     width: 95%;
 
     .item1 {
-        background-color: violet;
+        background-color: indigo;
+        color: white;
         grid-area: header;
     }
 
@@ -83,7 +86,8 @@ grid-page {
     }
 
     .item5 {
-        background-color: violet;
+        background-color: indigo;
+        color: white;
         grid-area: footer;
     }
 }
