@@ -26,12 +26,21 @@ intro-page {
         align-self: center;
     }
 
-    img.butterfly {
+    img.logo {
+        transition: all 0.5s;
         position: absolute;
         bottom: 1rem;
         right: 2rem;
         width: 3rem;
         rotate: -15deg;
+
+        &.zoom {
+            position: absolute;
+            bottom: 40%;
+            right: 10%;
+            width: 80%;
+            rotate: 0deg;
+        }
     }
 
     .side-by-side {
@@ -77,21 +86,6 @@ intro-page {
         position: relative;
         font-size: 5rem;
         height: 100dvh;
-    }
-
-    .center-div {
-        h1 {
-            position: absolute;
-            margin: 0;
-            z-index: 1;
-
-            font-variant-caps: petite-caps;
-            text-shadow: 10px 10px 15px #500877, -2px -2px 5px #890668;
-        }
-
-        .emoji {
-            font-size: 22rem;
-        }
     }
 
 }
