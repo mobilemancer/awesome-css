@@ -31,7 +31,7 @@ intro-page {
         position: absolute;
         bottom: 1rem;
         right: 2rem;
-        width: 3rem;
+        width: 4rem;
         rotate: -15deg;
 
         &.zoom {
@@ -58,7 +58,7 @@ intro-page {
 
         .wide {
             padding-right: 40px;
-            width: 60%;
+            width: 50%;
         }
     }
 
