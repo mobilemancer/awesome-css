@@ -20,5 +20,9 @@ speaker-pres {
         color: #ea82b3;
     }
 
-    .sponsors {}
+    .sponsors {
+        display: flex;
+        justify-content: space-around;
+        margin: 0 2rem 3rem 2rem;
+    }
 }

@@ -1,6 +1,7 @@
+export * from "./missing-page";
 export * from "./pages/intro-page";
 export * from "./pages/outro-page";
-export * from "./missing-page";
+export * from "./pages/speaker-pres/speaker-pres";
 
 export * from "./components/available-usable";
 
