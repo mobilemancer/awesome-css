@@ -10,6 +10,8 @@ media-hover {
         width: 180px;
         overflow: hidden;
         justify-content: center;
+        font-size: large;
+        font-weight: 600;
 
         >* {
             display: flex;

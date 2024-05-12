@@ -7,7 +7,7 @@
         <p>📱 In the good old days we used to guess if the device had hover, given screen size</p>
         <p>☠️ Hacks that could check for mouse over</p>
         <p>📏 Allows us to use consistent design patterns for multiple device types</p>
-        <p>🖱️ The @hover media query can be used to query if the device supports hover or not</p>
+        <p>🖱️ The <code>@hover</code> media query can be used to query if the device supports hover or not</p>
     </div>
 
 </div>
@@ -17,17 +17,17 @@
     <h2>Usage</h2>
 
     <section class="center">
-        <p>Style for devices that support hover with <code>hover: hover</code></p>
-        <p>Style for devices that don't support hover with <code>hover: none</code></p>
+        <p>✅ Style for devices that support hover with <code>hover: hover</code></p>
+        <p>⛔ Style for devices that don't support hover with <code>hover: none</code></p>
 
         <pre>
-  @media(hover: hover) {
-    /* styles for devices with hover */
-  }
+    @media(hover: hover) {
+        /* styles for devices with hover */
+    }
 
-  @media(hover: none) {
-    /* styles for devices without hover */
-  }</pre>
+    @media(hover: none) {
+        /* styles for devices without hover */
+    }</pre>
     </section>
 </div>
 
@@ -54,19 +54,19 @@
     <h2>Code - CSS</h2>
     <section class="center">
         <pre>
-            .title {
-                opacity: 0;
+    .title {
+        opacity: 0;
 
-                @media(hover: none) {
-                    opacity: 1;
-                }
-            }
+        @media(hover: none) {
+            opacity: 1;
+        }
+    }
 
-            &:hover {
-                .title {
-                    opacity: 1;
-                }
-            }
+    &:hover {
+        .title {
+            opacity: 1;
+        }
+    }
         </pre>
     </section>
 </div>
