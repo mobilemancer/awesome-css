@@ -26,7 +26,7 @@
 </div>
 
 <div class="slides-section">
-  <h2>Code - Cards</h2>
+  <h2>Code - Setting Up the Container</h2>
   <section class="center">
     <pre>
   .card-container {
@@ -34,21 +34,13 @@
   }
   
   .card {
-    h2 {
-        color: white;
-    }
-
     width: 30%;
-    color: white;
-    background-color: hotpink;
-    border-radius: 10px;
-    padding: 20px;
-    box-sizing: border-box;
+    ...
   }
 
   .big {
       width: 60%;
-      background-color: purple;
+      ...
   }</pre>
   </section>
 </div>
@@ -61,16 +53,13 @@
         <section class="card">
           <h2>Card</h2>
           <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-          <p class="info"> Quisquam voluptatum, quibusdam, quia... </p>
         </section>
 
         <section class="card big">
           <h2>Card Big</h2>
           <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-          <p class="info"> Quisquam voluptatum, quibusdam, quia... </p>
+          <p class="info">Info: Quisquam voluptatum, quibusdam, quia... </p>
         </section>
-        ...
-        ...
         ...
       </div>
     </xmp>
@@ -79,93 +68,91 @@
 </div>
 
 <div class="slides-section">
-  <h2>Code - Container query</h2>
+  <h2>Code - Container Query for the Container</h2>
   <section class="center">
     <pre>
-@container (max-width: 800px) {
-  .big {
-      width: 30%;
-  }
+      .card-container {
 
-  .card {
-      h2 {
-          font-size: 1em;
+        @container (max-width: 800px) {
+          .big {
+            width: 30%;
+          }
+        }
+        
       }
+</pre>
+  </section>
+</div>
 
-      .info {
-          display: none;
-      }
-  }
-}
+<div class="slides-section">
+  <h2>Code - Container Query for Big Component</h2>
+  <section class="center">
+    <pre>
+      .big {
+        container-type: inline-size;
+        width: 60%;
+    
+        @container (max-width: 400px) {
+            .info {
+                display: none;
+            }
+        }
+    }
 </pre>
   </section>
 </div>
 
 <div class="slides-section">
   <p>
-    Cards will be modified at container width < 800, Current container width: ${containerWidth} </p>
+    Cards will be modified at container width < 1200, Current container width: ${containerWidth} </p>
       <div ref="container" class="card-container">
         <section class="card">
           <h2>Card</h2>
           <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-          <p class="info"> Quisquam voluptatum, quibusdam, quia, quae voluptatem voluptas
+        </section>
+
+        <section class="card big">
+          <h2>Card Big</h2>
+          <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+          <p class="info">Info: Quisquam voluptatum, quibusdam, quia, quae voluptatem voluptas
             quod exercitationem quos voluptatibus quas doloribus. </p>
         </section>
 
         <section class="card big">
           <h2>Card Big</h2>
           <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-          <p class="info"> Quisquam voluptatum, quibusdam, quia, quae voluptatem voluptas
-            quod exercitationem quos voluptatibus quas doloribus. </p>
-        </section>
-
-        <section class="card big">
-          <h2>Card Big</h2>
-          <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-          <p class="info"> Quisquam voluptatum, quibusdam, quia, quae voluptatem voluptas
+          <p class="info">Info: Quisquam voluptatum, quibusdam, quia, quae voluptatem voluptas
             quod exercitationem quos voluptatibus quas doloribus. </p>
         </section>
 
         <section class="card">
           <h2>Card</h2>
           <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-          <p class="info"> Quisquam voluptatum, quibusdam, quia, quae voluptatem voluptas
+        </section>
+
+        <section class="card">
+          <h2>Card</h2>
+          <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+        </section>
+
+        <section class="card big">
+          <h2>Card Big</h2>
+          <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+          <p class="info">Info: Quisquam voluptatum, quibusdam, quia, quae voluptatem voluptas
             quod exercitationem quos voluptatibus quas doloribus. </p>
         </section>
 
         <section class="card big">
           <h2>Card Big</h2>
           <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-          <p class="info"> Quisquam voluptatum, quibusdam, quia, quae voluptatem voluptas
-            quod exercitationem quos voluptatibus quas doloribus. </p>
-        </section>
-
-        <section class="card big">
-          <h2>Card Big</h2>
-          <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-          <p class="info"> Quisquam voluptatum, quibusdam, quia, quae voluptatem voluptas
+          <p class="info">Info: Quisquam voluptatum, quibusdam, quia, quae voluptatem voluptas
             quod exercitationem quos voluptatibus quas doloribus. </p>
         </section>
 
         <section class="card">
           <h2>Card Big</h2>
           <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-          <p class="info"> Quisquam voluptatum, quibusdam, quia, quae voluptatem voluptas
-            quod exercitationem quos voluptatibus quas doloribus. </p>
         </section>
 
-        <section class="card big">
-          <h2>Card Big</h2>
-          <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-          <p class="info"> Quisquam voluptatum, quibusdam, quia, quae voluptatem voluptas
-            quod exercitationem quos voluptatibus quas doloribus. </p>
-        </section>
-
-        <section class="card big">
-          <h2>Card Big</h2>
-          <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-          <p class="info"> Quisquam voluptatum, quibusdam, quia, quae voluptatem voluptas
-            quod exercitationem quos voluptatibus quas doloribus. </p>
-        </section>
       </div>
 </div>
