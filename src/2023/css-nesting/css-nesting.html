@@ -7,6 +7,8 @@
     <p>🎓 CSS nesting used to be a priviliege only for users of CSS pre-processors </p>
     <p>🥰 Big part of why SASS and LESS became so popular</p>
     <p>😃 Now available in all browsers, no build tools required!</p>
+    <p></p>
+    <p>⚠️ Make sure your users are running updated browsers ⚠️</p>
   </section>
 </div>
 
@@ -45,17 +47,39 @@
 <div class="slides-section">
   <h2>Complex Nesting</h2>
   <section class="center">
-    <p>For combined selectors use ampersand "&".</p>
-    <p>The common sibling and child slectors are also available.</p>
+    <p>For most combined selectors, it's ok to use ampersand "&" - but also to omit it.</p>
 
-    <xmp>
-      ul > li { }
+    <pre>
+      ul {
+        & > li { }
+      }
+
+      ⬇️⬆️
+
+      ul {
+        > li { }
+      }
+    </pre>
+  </section>
+</div>
+
+<div class="slides-section">
+  <h2>Complex Nesting</h2>
+  <section class="center">
+    <p>⚠️ For compound selectors using ampersand "&" is a must!</p>
+
+    <pre>
+      .card {
+        .big { }
+      }
 
       ⬇️
 
-      ul {
-      & > li { }
-      }
-    </xmp>
+      .card .big { }
+
+      ❗🟰
+
+      .card.big { }
+    </pre>
   </section>
 </div>
