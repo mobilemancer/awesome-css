@@ -27,29 +27,21 @@
     <h2>Code</h2>
     <section class="center">
         <pre>
-    .a98-rgb {
-        background-color: color(a98-rgb 0 0.8 0.8);
-    }
+            .lab {
+                background-image: linear-gradient(to right in lab, blue, red);
+            }
 
-    .prophoto-rgb {
-        background-color: color(prophoto-rgb 0 0.8 0);
-    }
+            .oklab {
+                background-image: linear-gradient(to right in oklab, blue, red);
+            }
+            
+            .srgb-linear {
+                background-image: linear-gradient(to right in srgb-linear, blue, red);
+            }
 
-    .srgb-linear {
-        background-color: color(srgb-linear 1 0.5 0);
-    }
-
-    .display-p3 {
-        background-color: color(display-p3 0.8 0.4 0.2);
-    }
-
-    .rec2020 {
-        background-color: color(rec2020 1 0 1);
-    }
-
-    .srgb {
-        background-color: color(srgb 0 255 0);
-    }</pre>
+            .srgb {
+                background-image: linear-gradient(to right in srgb, blue, red);
+            }</pre>
     </section>
 </div>
 
@@ -58,17 +50,10 @@
     <h2>Result</h2>
     <section class="center">
         <div class="grid">
-            <div class="box a98-rgb">a98-rgb</div>
-
-            <div class="box prophoto-rgb">prophoto-rgb</div>
-
-            <div class="box srgb-linear">srgb-linear</div>
-
-            <div class="box display-p3 ">display-p3</div>
-
-            <div class="box rec2020">rec2020</div>
-
+            <div class="box lab">lab</div>
+            <div class="box oklab">oklab</div>
             <div class="box srgb">srgb</div>
+            <div class="box srgb-linear">srgb-linear</div>
         </div>
     </section>
 
