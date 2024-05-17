@@ -39,6 +39,27 @@
 </div>
 
 <div class="slides-section">
+    <h2>Code - CSS</h2>
+    <section class="center">
+        <pre>
+            .grid-container {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+                gap: 1rem;
+        
+                .subgrid-container {
+                    display: grid;
+                    grid-column: 2 / span 2;
+                    grid-row: 2 / span 2;
+                    grid-template-columns: subgrid;
+                    grid-template-rows: subgrid;
+                }
+            }        </pre>
+    </section>
+</div>
+
+<div class="slides-section">
     <h2>Code - Markup</h2>
     <section class="center">
         <xmp>
@@ -56,36 +77,6 @@
                 </div>
             </div>
         </xmp>
-    </section>
-</div>
-
-<div class="slides-section">
-    <h2>Code - CSS</h2>
-    <section class="center">
-        <pre>
-            .grid-container {
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                grid-template-rows: repeat(3, 1fr);
-                gap: 1rem;
-        
-                .grid-item {
-                    height: 9rem;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    background-color: blueviolet; }
-        
-                .subgrid-container {
-                    display: grid;
-                    grid-column: 2 / span 2;
-                    grid-row: 2 / span 2;
-                    grid-template-columns: subgrid;
-                    grid-template-rows: subgrid;
-        
-                    .grid-item {
-                        background-color: indigo;
-                        box-shadow: 5px 5px 15px purple;  } } }        </pre>
     </section>
 </div>
 
