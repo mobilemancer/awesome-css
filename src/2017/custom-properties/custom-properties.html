@@ -50,7 +50,7 @@
 </div>
 
 <div class="slides-section">
-    <h2>Good for Color Schemes</h2>
+    <h2>Good for Design Systems</h2>
     <section class="center">
         <pre>
         :root {
@@ -83,9 +83,9 @@
         color-scheme: light dark; /* Must be set, or the feature won't work */
       }
       
-    :root {
+    .box {
         /* Light Mode returns the first value, Dark Mode the second */
-        --text-color: light-dark(#333, #ccc);
+        color: light-dark(#333, #ccc);
     }</pre>
     </section>
 </div>
