@@ -3,6 +3,15 @@
     <available-usable date="2017" url="https://caniuse.com/css-variables"></available-usable>
 
     <section class="bullets">
+        <p>⌛ One of the big reasons we used CSS preprocessors in the past!</p>
+        <p>💜 SASS, LESS, Stylus, etc...</p>
+    </section>
+</div>
+
+<div class="slides-section">
+    <h1>Custom Properties</h1>
+
+    <section class="bullets">
         <p>📝 Declaration: CSS custom properties start with <code>--</code></p>
         <p>🎨 Usage: Use <code>var()</code> to access them</p>
         <p>💡 Benefits: They keep code DRY, great for themes</p>
@@ -12,18 +21,19 @@
 </div>
 
 <div class="slides-section">
-    <h2>Code</h2>
+    <h2>Code - Defining & Using Custom Properies</h2>
     <section class="center">
 
         <pre>
         :root {
             --color: purple;
-            --shadow: 10px 10px 5px rgb(57, 4, 57);
+            --shadow-length: 10px;
+            --shadow: var(--shadow-length) var(--shadow-length) 
+                                5px rgb(57, 4, 57);
         }
+
         .box {
-            width: 300px;
-            height: 300px;
-            margin: auto;
+            ...
             background-color: var(--color);
             box-shadow: var(--shadow);
         }
@@ -40,7 +50,7 @@
 </div>
 
 <div class="slides-section">
-    <h2>Code - Themes</h2>
+    <h2>Good for Design Systems</h2>
     <section class="center">
         <pre>
         :root {
@@ -63,18 +73,45 @@
 </div>
 
 <div class="slides-section">
-    <h2>Upcoming</h2>
+    <h2>The <i>light-dark</i> Function</h2>
     <section class="center">
         <p>A new feature that is proposed is the <code>light-dark()</code> function</p>
+        <p>⚠️ As of today not available in Safari</p>
 
         <pre>
     :root {
-        color-scheme: light dark;
+        color-scheme: light dark; /* Must be set, or the feature won't work */
       }
       
-    :root {
+    .box {
         /* Light Mode returns the first value, Dark Mode the second */
-        --text-color: light-dark(#333, #ccc);
+        color: light-dark(#333, #ccc);
     }</pre>
+    </section>
+</div>
+
+<div class="slides-section">
+    <h2>The <i>light-dark</i> Function - cont...</h2>
+    <section class="center">
+        <p>Will help us avoid juggling tripple sets of properties.</p>
+        <pre>
+    :root {
+        color-scheme: light dark; /* Must be set, or the feature won't work */
+        --cmp-text-color-light: #333;
+        --cmp-text-color-dark: #ccc;
+        --cmp-bg-color-light: #fff;
+        --cmp-bg-color-dark: #333;
+      }
+      
+    .box {
+        /* Light Mode returns the first value, Dark Mode the second */
+        color: light-dark(--cmp-text-color-light, --cmp-text-color-dark);
+        background-color: light-dark(--cmp-bg-color-light, --cmp-bg-color-dark);
+    }
+
+    alt.
+
+    --color-primary: light-dark(#333, #ccc);
+</pre>
     </section>
 </div>

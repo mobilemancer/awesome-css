@@ -1,5 +1,15 @@
 :root {
   --menu-width: 200px;
+  --primary-background-color: gray;
+  --primary-text-color: black;
+}
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary-background-color: black;
+    --primary-text-color: beige;
+  }
 }
 
 /* Scrollbar styling */
@@ -20,8 +30,8 @@
 }
 
 html {
-  background-color: black;
-  color: beige;
+  background-color: var(--primary-background-color);
+  color: var(--primary-text-color);
   font-size: 26px;
 }
 
@@ -40,7 +50,7 @@ h4 {
 my-app {
   display: grid;
   grid-template-columns: var(--menu-width) 1fr;
-  color: white;
+  color: var(--primary-text-color);
   gap: 20px;
   height: 100dvh;
   overflow: hidden;
@@ -56,7 +66,8 @@ my-app {
   nav {
     direction: rtl;
     font-size: initial;
-    background-color: black;
+    color: var(--primary-background-color);
+    background-color: var(--primary-background-color);
     display: flex;
     flex-direction: column;
     height: 100dvh;
@@ -71,7 +82,7 @@ my-app {
       height: 100dvh;
 
       h4 {
-        color: black;
+        color: var(--primary-background-color-color);
         margin-bottom: 0.2rem;
       }
 
@@ -79,7 +90,7 @@ my-app {
         display: block;
         padding: 10px;
         text-decoration: none;
-        color: black;
+        color: var(--primary-background-color-color);
         transition: all 0.5s ease-in-out;
       }
 
@@ -88,8 +99,8 @@ my-app {
       }
 
       a.active {
-        color: black;
-        background-color: black;
+        color: var(--primary-text-color);
+        background-color: var(--primary-background-color);
         text-shadow: 0 0 10px hotpink, 0 0 20px hotpink, 0 0 30px hotpink, 0 0 40px hotpink;
       }
 
@@ -100,15 +111,17 @@ my-app {
   }
 
   nav:hover {
-    color: white;
+    color: var(--primary-text-color);
+
     text-shadow: none;
 
     h4 {
-      color: white;
+      color: var(--primary-text-color);
+
     }
 
     a {
-      color: grey;
+      color: var(--primary-text-color);
     }
   }
 

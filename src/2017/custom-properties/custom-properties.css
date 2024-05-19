@@ -15,12 +15,14 @@ custom-properties {
 
 :root {
     --color: purple;
-    --shadow: 10px 10px 5px rgb(57, 4, 57);
+    --shadow-length: 10px;
+    --shadow: var(--shadow-length) var(--shadow-length) 5px rgb(57, 4, 57);
+
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
         --color: rgb(54, 0, 98);
-        --shadow: 10px 10px 25px rgb(217, 2, 217);
+        --shadow: var(--shadow-length) var(--shadow-length) 25px rgb(217, 2, 217);
     }
 }

@@ -34,25 +34,25 @@ grid-page {
     gap: 20px;
     grid-template-areas: "header header header" "left main sidebar" "footer footer footer";
 
-    .item1 {
+    .header {
         background-color: indigo;
         color: white;
         grid-area: header;
     }
 
-    .item2 {
+    .left {
         grid-area: left;
     }
 
-    .item3 {
+    .main {
         grid-area: main;
     }
 
-    .item4 {
+    .sidebar {
         grid-area: sidebar;
     }
 
-    .item5 {
+    .footer {
         background-color: indigo;
         color: white;
         grid-area: footer;
@@ -60,32 +60,32 @@ grid-page {
 }
 
 .query-container {
-    background-color: green;
+    background-color: rgb(53, 2, 90);
     display: grid;
     gap: 20px;
     grid-template-areas: "header header header" "left-side main sidebar" "footer footer footer";
 
     width: 95%;
 
-    .item1 {
+    .header {
         background-color: indigo;
         color: white;
         grid-area: header;
     }
 
-    .item2 {
+    .left {
         grid-area: left-side;
     }
 
-    .item3 {
+    .main {
         grid-area: main;
     }
 
-    .item4 {
+    .sidebar {
         grid-area: sidebar;
     }
 
-    .item5 {
+    .footer {
         background-color: indigo;
         color: white;
         grid-area: footer;
@@ -96,11 +96,11 @@ grid-page {
     .query-container {
         grid-template-areas: "header" "main" "footer";
 
-        .item2 {
+        .left {
             display: none;
         }
 
-        .item4 {
+        .sidebar {
             display: none;
         }
     }

@@ -1,11 +1,14 @@
+export * from "./missing-page";
 export * from "./pages/intro-page";
 export * from "./pages/outro-page";
-export * from "./missing-page";
+export * from "./pages/speaker-pres/speaker-pres";
 
 export * from "./components/available-usable";
 
 export * from "./2017/custom-properties/custom-properties";
 export * from "./2017/grid/grid-page";
+
+export * from "./2018/media-hover/media-hover";
 
 export * from "./2022/viewport-units/viewport-units";
 export * from "./2022/flex-gap/flex-gap";

@@ -11,8 +11,6 @@ container-queries {
     flex-wrap: wrap;
     align-items: start;
     box-sizing: border-box;
-    width: 100%;
-    height: 100%;
     overflow-y: auto;
     resize: horizontal;
 
@@ -20,34 +18,33 @@ container-queries {
 }
 
 .card {
-    h2 {
-        color: white;
-    }
-
     width: 30%;
-    color: white;
-    background-color: hotpink;
+    background-color: indigo;
     border-radius: 10px;
     padding: 20px;
     box-sizing: border-box;
+
+    .info {
+        filter: brightness(65%);
+        color: var(--primary-text-color);
+    }
 }
+
 
 .big {
+    container-type: inline-size;
     width: 60%;
     background-color: purple;
-}
 
-@container (max-width: 800px) {
-    .card {
-        h2 {
-            font-size: 1em;
-        }
-
+    @container (max-width: 400px) {
         .info {
             display: none;
         }
     }
+}
 
+
+@container (max-width: 1200px) {
     .big {
         width: 30%;
     }

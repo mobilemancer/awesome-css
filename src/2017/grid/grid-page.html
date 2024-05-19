@@ -25,12 +25,12 @@
     <p>Positioning items in the grid</p>
     <pre>
       .item {
-        grid-column: 1 / 2;
-        grid-row: 2 / 3;
+        grid-column: 2;
+        grid-row: 3 / 4;
       }    </pre>
     <pre>
       .item {
-        grid-column: 1 / span 2;
+        grid-column: 1 / span 3;
         grid-row: 2 / span 2;
       }    </pre>
   </section>
@@ -62,11 +62,11 @@
       .container {
         display: grid;
         grid-template-columns: 1fr 3fr 1fr;
-        grid-template-rows: auto 1fr auto;
+        grid-template-rows: auto 1fr 2fr auto;
       }
     </pre>
 
-    <p>Alt...</p>
+    <p>And...</p>
     <pre>
       .container {
         display: grid;
@@ -77,17 +77,21 @@
 </div>
 
 <div class="slides-section">
-  <h2>Code - Markup</h2>
+  <h2>Example - Simple Grid</h2>
   <section class="center">
+    <pre>
+      .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        ...
+      }
+    </pre>
     <xmp>
       <section class="container">
-        <div class="item">Hello 1</div>
-        <div class="item">Hello 2</div>
-        <div class="item">Hello 3</div>
-        <div class="item">Hello 4</div>
-        <div class="item">Hello 5</div>
-        <div class="item">Hello 6</div>
-        <div class="item">Hello 7</div>
+        <div>Hello 1</div>
+        <div>Hello 2</div>
+        ...
+        <div>Hello 7</div>
       </section>
     </xmp>
   </section>
@@ -113,9 +117,7 @@
   <section class="center">
     <pre>
   .named-container {
-    background-color: purple;
     display: grid;
-    gap: 20px;
     grid-template-areas: "header header header"
                          "left main sidebar"
                          "footer footer footer";
@@ -126,27 +128,27 @@
 </div>
 
 <div class="slides-section">
-  <h2>Code - Named Areas, Items...</h2>
+  <h2>Code - Positioning Elements in Named Areas</h2>
   <section class="center">
     <pre>
 
-  .item1 {
+  .header {
     grid-area: header;
   }
 
-  .item2 {
+  .left {
     grid-area: left;
   } 
 
-  .item3 {
+  .main {
     grid-area: main;
   }
 
-  .item4 {
+  .sidebar {
     grid-area: sidebar;
   }
 
-  .item5 {
+  .footer {
     grid-area: footer;
   }
     </pre>
@@ -154,15 +156,15 @@
 </div>
 
 <div class="slides-section">
-  <h2>Code - Markup for named areas</h2>
+  <h2>Code - Markup for Named Area Grid</h2>
   <section class="center">
     <xmp>
       <section class="named-container">
-        <div class="item item5">Footer</div>
-        <div class="item item4">Right side</div>
-        <div class="item item3">Middle</div>
-        <div class="item item2">Left side</div>
-        <div class="item item1">Header</div>
+        <div class="footer">Footer</div>
+        <div class="main">Middle</div>
+        <div class="sidebar">Right side</div>
+        <div class="left">Left side</div>
+        <div class="header">Header</div>
       </section>
     </xmp>
   </section>
@@ -172,27 +174,27 @@
   <h2>Result</h2>
   <section class="center">
     <section class="named-container">
-      <div class="item item5">Footer</div>
-      <div class="item item4">Right side</div>
-      <div class="item item3">Middle</div>
-      <div class="item item2">Left side</div>
-      <div class="item item1">Header</div>
+      <div class="item footer">Footer</div>
+      <div class="item main">Middle</div>
+      <div class="item sidebar">Right side</div>
+      <div class="item left">Left side</div>
+      <div class="item header">Header</div>
     </section>
   </section>
 </div>
 
 <div class="slides-section">
-  <h2>Implicit lines</h2>
-  <p>Define matching lines with *<code>-start</code> & *<code>-end</code></p>
-  <p>Will create an area with the identifier name</p>
-
+  <h2>Implicit Areas</h2>
   <section class="center">
+    <p>📏 Define matching lines with <code>{identifier}-start</code> & <code>{identifier}-end</code></p>
+    <p>📐 Will create an area with the <code>{identifier}</code> as name</p>
+
     <pre>
       .container {
         display: grid;
         grid-template-columns: 
           [full-start] 100px [main-start] auto [main-end] 1fr [full-end];
-        grid-template-rows: [row-start] auto [row-end];
+        grid-template-rows: [height-start] auto [height-end];
       }
     </pre>
 
@@ -205,20 +207,20 @@
 </div>
 
 <div class="slides-section">
-  <h2>"Dynamic" Grid</h2>
+  <h2>Responsive Grid</h2>
   <section class="center">
-    <p> Use @media or @container querries to modify the grid to make it responsive </p>
+    <p> Use <code>@media</code> or <code>@container</code> querries to modify the grid to make it responsive </p>
 
     <pre>
 @container (max-width: 800px) {
   .query-container {
       grid-template-areas: "header" "main" "footer";
 
-      .item2 {
+      .left {
           display: none;
       }
 
-      .item4 {
+      .sidebar {
           display: none;
       }
   }
@@ -230,10 +232,10 @@
 <div class="slides-section">
   <h2>Result</h2>
   <section class="query-container">
-    <div class="item item5">Footer</div>
-    <div class="item item4">Right side</div>
-    <div class="item item3">Middle</div>
-    <div class="item item2">Left side</div>
-    <div class="item item1">Header</div>
+    <div class="item footer">Footer</div>
+    <div class="item sidebar">Right side</div>
+    <div class="item left">Left side</div>
+    <div class="item main">Middle</div>
+    <div class="item header">Header</div>
   </section>
 </div>

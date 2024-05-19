@@ -6,39 +6,31 @@ color-functions {
 
     .grid {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 20px;
+        grid-template-columns: 1fr;
         width: 90%;
 
         .box {
-            height: 8rem;
+            height: 4rem;
             display: flex;
             align-items: center;
             justify-content: center;
         }
 
-        .a98-rgb {
-            background-color: color(a98-rgb 0 0.8 0.8);
-        }
-
-        .prophoto-rgb {
-            background-color: color(prophoto-rgb 0 0.8 0);
-        }
-
         .srgb-linear {
-            background-color: color(srgb-linear 1 0.5 0);
+            background-image: linear-gradient(to right in srgb-linear, blue, red);
         }
 
-        .display-p3 {
-            background-color: color(display-p3 0.8 0.4 0.2);
+        .lab {
+            background-image: linear-gradient(to right in lab, blue, red);
+
         }
 
-        .rec2020 {
-            background-color: color(rec2020 1 0 1);
+        .oklab {
+            background-image: linear-gradient(to right in oklab, blue, red);
         }
 
         .srgb {
-            background-color: color(srgb 0 255 0);
+            background-image: linear-gradient(to right in srgb, blue, red);
         }
     }
 }

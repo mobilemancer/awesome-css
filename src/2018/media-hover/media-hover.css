@@ -1,0 +1,46 @@
+media-hover {
+    display: block;
+    overflow-y: scroll;
+    height: 100dvh;
+    scroll-snap-type: y mandatory;
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        width: 180px;
+        overflow: hidden;
+        justify-content: center;
+        font-size: large;
+        font-weight: 600;
+
+        >* {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 10px;
+            margin: 10px;
+            background-color: #cccccc;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.5s;
+            color: black;
+
+            .title {
+                opacity: 0;
+
+                @media(hover: none) {
+                    opacity: 1;
+                }
+            }
+
+            &:hover {
+                .title {
+                    opacity: 1;
+                }
+            }
+
+        }
+    }
+
+}

@@ -1,0 +1,99 @@
+<div class="slides-section">
+    <h1>Hover Media Query</h1>
+
+    <available-usable date="2018" url="https://caniuse.com/mdn-css_at-rules_media_hover"></available-usable>
+
+    <div class="bullets">
+        <p>😅 In the good old days we had to guess if the device had hover (screen size)</p>
+        <p>☠️ Hacks that could check for mouse over</p>
+        <p>🖱️ The <code>@hover</code> media query can be used to query if the device supports hover</p>
+        <p>📏 Allows us to use consistent design patterns for multiple device types</p>
+    </div>
+
+</div>
+
+<div class="slides-section">
+
+    <h2>Usage</h2>
+
+    <section class="center">
+        <p>✅ Style for devices that support hover with <code>hover: hover</code> or <code>hover</code></p>
+        <p>⛔ Style for devices that don't support hover with <code>hover: none</code></p>
+
+        <pre>
+    @media(hover) {
+        /* styles for devices with hover */
+    }
+
+    @media(hover: none) {
+        /* styles for devices without hover */
+    }</pre>
+    </section>
+</div>
+
+<div class="slides-section">
+    <h2>Code - Markup</h2>
+    <section class="center">
+        <xmp>
+            <nav>
+                <div>
+                    <img src="menu/home.webp">
+                    <div class="title">Home</div>
+                </div>
+                <div>
+                    <img src="menu/dog.webp">
+                    <div class="title">Dog</div>
+                </div>
+                ...
+            </nav>
+        </xmp>
+    </section>
+</div>
+
+<div class="slides-section">
+    <h2>Code - CSS</h2>
+    <section class="center">
+        <pre>
+    .title {
+        opacity: 0;
+
+        @media(hover: none) {
+            opacity: 1;
+        }
+    }
+
+    &:hover {
+        .title {
+            opacity: 1;
+        }
+    }
+        </pre>
+    </section>
+</div>
+
+<div class="slides-section">
+
+    <nav>
+        <div>
+            <img src="menu/home.webp">
+            <div class="title">Home</div>
+        </div>
+        <div>
+            <img src="menu/dog.webp">
+            <div class="title">Dog</div>
+        </div>
+        <div>
+            <img src="menu/cat.webp">
+            <div class="title">Cat</div>
+        </div>
+        <div>
+            <img src="menu/sloth.webp">
+            <div class="title">Sloth</div>
+        </div>
+        <div>
+            <img src="menu/cog.webp">
+            <div class="title">Settings</div>
+        </div>
+    </nav>
+
+</div>

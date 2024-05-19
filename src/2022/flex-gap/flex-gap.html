@@ -4,7 +4,7 @@
 
   <div class="bullets">
     <p>🌅 In the begining there was grid-gap</p>
-    <p>🤔 Then came flex-gap</p>
+    <p>🤔 Then came "flex-gap", now just "gap"...</p>
     <p>📲 Works in grid-container, flex-container & multi column layouts</p>
   </div>
 </div>
@@ -12,26 +12,57 @@
 <div class="slides-section">
 
   <h2>Gap</h2>
-  <pre>
-1. gap: 3rem 1rem;
-2. gap: 3rem;
-</pre>
 
-  <p>
-    The first value is for <em>row gap</em>. The second value is for
-    <em>column gap</em>, and if this is omitted, then it's assumed to have the
-    same value as <em>row gap</em>.
-  </p>
 
-  <section class="flex-container">
-    <div class="card"></div>
-    <div class="card"></div>
-    <div class="card"></div>
-    <div class="card"></div>
-    <div class="card"></div>
-    <div class="card"></div>
-    <div class="card"></div>
-    <div class="card"></div>
-    <div class="card"></div>
+
+  <div class="bullets">
+    <pre>
+      1. gap: 3rem 2rem;
+      2. gap: 5rem;</pre>
+    <p>👉 The first value is for <em>row gap</em></p>
+    <p>👇 The second for <em>column gap</em></p>
+    <p>🟰 If one is omitted, then it's assumed to have the same value for both</p>
+  </div>
+
+</div>
+
+<div class="slides-section">
+  <h2>Code</h2>
+  <section class="center">
+    <pre>
+      .flex-container {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 4rem 2rem;
+          padding: 1rem;
+      }
+      </pre>
+
+    <xmp>
+      <section class="flex-container">
+        <div class="box"></div>
+        ...
+        <div class="box"></div>
+      </section>
+    </xmp>
+
+  </section>
+</div>
+
+<div class="slides-section">
+  <h2>Result</h2>
+  <section class="center">
+
+    <section class="flex-container">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </section>
+
   </section>
 </div>
