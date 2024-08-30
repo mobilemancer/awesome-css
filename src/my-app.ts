@@ -1,5 +1,5 @@
 export class MyApp {
-    public showingPresenterSlide = true;
+    public showingPresenterSlide = false;
     attached() {
         window.addEventListener('keypress', (e) => {
             if (e.key === ' ') {
