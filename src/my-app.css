@@ -29,6 +29,8 @@
   width: 3px;
 }
 
+/* end Scrollbar styling */
+
 html {
   background-color: var(--primary-background-color);
   color: var(--primary-text-color);
@@ -47,31 +49,97 @@ h4 {
   font-family: 'Russo One', sans-serif;
 }
 
+h2 {
+  margin-top: 30px;
+}
+
 my-app {
+
+  /* hamburglar */
+  .hamburger-icon {
+    width: 25px;
+    height: 2px;
+    background-color: black;
+    position: relative;
+    display: inline-block;
+  }
+
+  .hamburger-icon::before,
+  .hamburger-icon::after {
+    content: '';
+    width: 25px;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    left: 0;
+  }
+
+  .hamburger-icon::before {
+    top: -10px;
+  }
+
+  .hamburger-icon::after {
+    top: 10px;
+  }
+
+  /* end hamburglar */
+
+
   display: grid;
-  grid-template-columns: var(--menu-width) 1fr;
+  /* grid-template-columns: var(--menu-width) 1fr; */
+  grid-template-columns: 1fr;
   color: var(--primary-text-color);
   gap: 20px;
   height: 100dvh;
   overflow: hidden;
 
-  code {
-    background-color: #9400d350;
-
-    padding: 3px 5px;
+  .fixed-top-left {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    margin: 10px;
+    color: black;
+    padding: 20px;
     border-radius: 5px;
-    border: 1px solid darkviolet;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
-  nav {
+  :popover-open {
+    width: 200px;
+    height: 100px;
+    position: absolute;
+    inset: unset;
+    top: 0px;
+    left: 5px;
+    margin: 0;
+  }
+
+
+  #menu {
     direction: rtl;
     font-size: initial;
     color: var(--primary-background-color);
     background-color: var(--primary-background-color);
-    display: flex;
+    display: none;
     flex-direction: column;
     height: 100dvh;
     overflow-y: auto;
+
+    background-color: white;
+    /* Light background for contrast */
+    color: black;
+    /* Dark text for contrast */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    padding: 20px;
+    /* Add some padding */
+    border-radius: 5px;
+    /* Add some border radius */
 
     transition: all 0.5s ease-in-out;
 
@@ -110,6 +178,10 @@ my-app {
     }
   }
 
+  #menu[popover]:popover-open {
+    display: flex;
+  }
+
   nav:hover {
     color: var(--primary-text-color);
 
@@ -117,13 +189,22 @@ my-app {
 
     h4 {
       color: var(--primary-text-color);
-
     }
 
     a {
       color: var(--primary-text-color);
     }
   }
+
+
+  code {
+    background-color: #9400d350;
+
+    padding: 3px 5px;
+    border-radius: 5px;
+    border: 1px solid darkviolet;
+  }
+
 
   & au-viewport {
     height: 100dvh;
@@ -143,8 +224,6 @@ my-app {
   }
 }
 
-
-
 .slides-section {
   scroll-snap-align: start;
   display: flex;
@@ -162,9 +241,7 @@ my-app {
     width: 80%;
     object-fit: contain;
   }
-}
 
-.slides-section {
   .bullets {
     font-size: larger;
     height: 100%;
@@ -183,8 +260,6 @@ my-app {
     justify-content: center;
   }
 }
-
-
 
 pre {
   width: fit-content;
@@ -219,8 +294,4 @@ xmp {
   padding: 20px;
   min-width: 50dvw;
 
-}
-
-h2 {
-  margin-top: 30px;
 }
