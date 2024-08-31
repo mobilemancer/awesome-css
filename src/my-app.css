@@ -1,5 +1,9 @@
 :root {
   --menu-width: 200px;
+  --menu-height: 90dvh;
+  --menu-color-bg: rgba(255, 255, 255, 0.9);
+  --menu-position-left: 100;
+
   --primary-background-color: gray;
   --primary-text-color: black;
 }
@@ -55,7 +59,7 @@ h2 {
 
 my-app {
 
-  /* hamburglar */
+  /* hamburger */
   .hamburger-icon {
     width: 25px;
     height: 2px;
@@ -82,11 +86,10 @@ my-app {
     top: 10px;
   }
 
-  /* end hamburglar */
+  /* end hamburger */
 
 
   display: grid;
-  /* grid-template-columns: var(--menu-width) 1fr; */
   grid-template-columns: 1fr;
   color: var(--primary-text-color);
   gap: 20px;
@@ -102,7 +105,6 @@ my-app {
     color: black;
     padding: 20px;
     border-radius: 5px;
-    border: none;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -110,36 +112,39 @@ my-app {
   }
 
   :popover-open {
-    width: 200px;
-    height: 100px;
     position: absolute;
     inset: unset;
-    top: 0px;
+    top: 60px;
     left: 5px;
     margin: 0;
   }
 
+  [popover]:not(:popover-open):not(dialog[open]) {
+    display: block;
+    position: absolute;
+    inset: unset;
+    top: 60px;
+    left: -250px;
+  }
+
+  ::backdrop {
+    backdrop-filter: blur(3px);
+  }
 
   #menu {
     direction: rtl;
     font-size: initial;
     color: var(--primary-background-color);
-    background-color: var(--primary-background-color);
-    display: none;
     flex-direction: column;
-    height: 100dvh;
+    height: var(--menu-height);
     overflow-y: auto;
 
-    background-color: white;
-    /* Light background for contrast */
+    background-color: var(--menu-color-bg);
     color: black;
-    /* Dark text for contrast */
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     overflow-y: auto;
     padding: 20px;
-    /* Add some padding */
     border-radius: 5px;
-    /* Add some border radius */
 
     transition: all 0.5s ease-in-out;
 
@@ -147,7 +152,7 @@ my-app {
       direction: ltr;
       display: flex;
       flex-direction: column;
-      height: 100dvh;
+      height: var(--menu-height);
 
       h4 {
         color: var(--primary-background-color-color);
@@ -196,7 +201,6 @@ my-app {
     }
   }
 
-
   code {
     background-color: #9400d350;
 
@@ -204,7 +208,6 @@ my-app {
     border-radius: 5px;
     border: 1px solid darkviolet;
   }
-
 
   & au-viewport {
     height: 100dvh;
@@ -264,12 +267,10 @@ my-app {
 pre {
   width: fit-content;
   background-color: darkslategrey;
-  /* top, right, bottom, left */
   box-shadow: inset 0px 4px 3px -2px #000,
     inset -4px 0px 3px -2px #fff,
     inset 0px -4px 3px -2px #fff,
     inset 4px 0px 3px -2px #000;
-  /* or merged top-left, bottom-right */
   box-shadow: inset 4px 4px 3px -2px #000,
     inset -4px -4px 3px -2px #fff;
   border: 1px solid gray;
@@ -281,17 +282,14 @@ pre {
 xmp {
   width: fit-content;
   background-color: darkslateblue;
-  /* top, right, bottom, left */
   box-shadow: inset 0px 4px 3px -2px #000,
     inset -4px 0px 3px -2px #fff,
     inset 0px -4px 3px -2px #fff,
     inset 4px 0px 3px -2px #000;
-  /* or merged top-left, bottom-right */
   box-shadow: inset 4px 4px 3px -2px #000,
     inset -4px -4px 3px -2px #fff;
   border: 1px solid gray;
   border-radius: 5px;
   padding: 20px;
   min-width: 50dvw;
-
 }
