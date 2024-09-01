@@ -178,8 +178,10 @@ my-app {
       }
 
       a.active {
-        color: var(--primary-text-color);
-        background-color: var(--primary-background-color);
+        /* color: var(--primary-text-color);
+        background-color: var(--primary-background-color); */
+        text-decoration: underline;
+        font-size: 1.1em;
         text-shadow: 0 0 10px hotpink, 0 0 20px hotpink, 0 0 30px hotpink, 0 0 40px hotpink;
       }
 
