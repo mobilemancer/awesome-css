@@ -2,6 +2,10 @@
   --menu-width: 200px;
   --menu-height: 90dvh;
   --menu-color-bg: rgba(255, 255, 255, 0.9);
+  --menu-color: black;
+  --menu-btn-color-bg: darkgrey;
+  --menu--btn-color: black;
+  --menu-btn-box-shadow: 0 3px 8px rgba(128, 0, 128, 0.7);
   --menu-position-left: 100;
 
   --primary-background-color: gray;
@@ -58,37 +62,6 @@ h2 {
 }
 
 my-app {
-
-  /* hamburger */
-  .hamburger-icon {
-    width: 25px;
-    height: 2px;
-    background-color: black;
-    position: relative;
-    display: inline-block;
-  }
-
-  .hamburger-icon::before,
-  .hamburger-icon::after {
-    content: '';
-    width: 25px;
-    height: 2px;
-    background-color: black;
-    position: absolute;
-    left: 0;
-  }
-
-  .hamburger-icon::before {
-    top: -10px;
-  }
-
-  .hamburger-icon::after {
-    top: 10px;
-  }
-
-  /* end hamburger */
-
-
   display: grid;
   grid-template-columns: 1fr;
   color: var(--primary-text-color);
@@ -96,19 +69,52 @@ my-app {
   height: 100dvh;
   overflow: hidden;
 
-  .fixed-top-left {
+  .menu-btn {
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1000;
     margin: 10px;
-    color: black;
-    padding: 20px;
+    padding: 18px 12px;
     border-radius: 5px;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
+    color: var(--menu-btn-color);
+    background-color: var(--menu-btn-color-bg);
+    box-shadow: var(--menu-btn-box-shadow);
+
+    /* hamburger */
+    .hamburger-icon {
+      --line-width: 25px;
+      --line-height: 2px;
+      width: var(--line-width);
+      height: var(--line-height);
+      background-color: var(--menu-color);
+      position: relative;
+      display: inline-block;
+    }
+
+    .hamburger-icon::before,
+    .hamburger-icon::after {
+      content: '';
+      width: var(--line-width);
+      height: var(--line-height);
+      background-color: var(--menu-color);
+      position: absolute;
+      left: 0;
+    }
+
+    .hamburger-icon::before {
+      top: -10px;
+    }
+
+    .hamburger-icon::after {
+      top: 10px;
+    }
+
+    /* end hamburger */
   }
 
   :popover-open {
@@ -227,11 +233,14 @@ my-app {
   }
 }
 
+/* app wide style */
 .slides-section {
   scroll-snap-align: start;
   display: flex;
   flex-direction: column;
   height: 100dvh;
+  margin-left: max(80px, 3rem);
+  margin-right: 3rem;
 
   & h1 {
     align-self: center;
@@ -251,8 +260,6 @@ my-app {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-left: 2rem;
-    margin-right: 2rem;
     line-height: 1.7rem;
   }
 
