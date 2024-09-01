@@ -50,8 +50,9 @@ intro-page {
         align-items: center;
 
         img {
-            flex: 1;
+            flex: 1 1 40%;
             width: 100%;
+            max-width: 40%;
             object-fit: contain;
         }
 
