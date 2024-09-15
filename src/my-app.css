@@ -278,6 +278,15 @@ my-app {
     line-height: 1.7rem;
   }
 
+  .bullets-2c {
+    font-size: xx-large;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    line-height: 1.7rem;
+  }
+
   .center {
     display: flex;
     height: 100%;
