@@ -1,0 +1,35 @@
+unset-page {
+    display: block;
+    overflow-x: hidden;
+    height: 100dvh;
+    scroll-snap-type: y mandatory;
+
+    container-type: inline-size;
+
+    .container {
+        width: 95%;
+        background-color: indigo;
+        display: flex;
+        padding: 20px;
+
+        div,
+        div>* {
+            border: 1px solid red;
+            padding: 10px;
+        }
+
+        div>:first-child {
+            border: inherit;
+            padding: 10px;
+        }
+
+        p {
+            border: 2px solid green;
+            padding: 10px;
+        }
+
+        .no-border {
+            border: unset;
+        }
+    }
+}

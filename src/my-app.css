@@ -1,6 +1,6 @@
 :root {
   --menu-width: 200px;
-  --menu-height: 90dvh;
+  --menu-height: 85dvh;
   --menu-color-light-bg: rgba(255, 255, 255, 0.9);
   --menu-color-light: black;
   --menu-color-dark-bg: rgba(62, 61, 62, 0.9);
@@ -78,6 +78,10 @@ my-app {
   gap: 20px;
   height: 100dvh;
   overflow: hidden;
+
+  button.menu-btn {
+    border: unset;
+  }
 
   .menu-btn {
     position: fixed;
@@ -161,6 +165,7 @@ my-app {
     overflow-y: auto;
     padding: 20px;
     border-radius: 5px;
+    border: 1px solid black;
 
     transition: all 0.5s ease-in-out;
 

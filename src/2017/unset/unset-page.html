@@ -1,0 +1,62 @@
+<div class="slides-section">
+  <h1>Unset</h1>
+  <available-usable date="2017" url="https://caniuse.com/unset"></available-usable>
+
+  <div class="bullets">
+    <p>🛑 Used to "reset" a css property value</p>
+    <p>⤴️ Resets to inherited value, if it's an inheriting property</p>
+    <p>⬆️ Resets to initial value, for non inheriting properties</p>
+  </div>
+</div>
+
+<div class="slides-section">
+  <h2>Markup - Using unset of different props</h2>
+  <section class="center">
+    <xmp>
+      <div>
+        <p>We're in the first child of the div, we have a red border</p>
+        <p>We're in a nested paragraph, we have a Green border</p>
+        <p class="no-border">We're in a nested paragraph, but this border is unset</p>
+      </div>
+    </xmp>
+  </section>
+</div>
+
+<div class="slides-section">
+  <h2>CSS - Using unset of different props</h2>
+  <section class="center">
+    <pre>
+      div,
+      div>* {
+          border: 1px solid red;
+      }
+
+      div>:first-child {
+          border: inherit;
+      }
+
+      p {
+          border: 2px solid green;
+      }
+
+      .no-border {
+          border: unset;
+      }   </pre>
+  </section>
+</div>
+
+<div class="slides-section">
+  <h2>Result</h2>
+  <section class="center">
+    <section class="container">
+      <section>
+        <h3>Unset</h3>
+        <div>
+          <p>We're in the first child of the div, we have a red border</p>
+          <p>We're in a nested paragraph, we have a Green border</p>
+          <p class="no-border">We're in a nested paragraph, but this border is unset</p>
+        </div>
+      </section>
+    </section>
+  </section>
+</div>
