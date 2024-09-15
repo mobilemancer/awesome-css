@@ -1,0 +1,49 @@
+<div class="slides-section">
+    <h1>The <i>light-dark</i> Function</h1>
+    <available-usable date="2024" url="https://caniuse.com/mdn-css_types_color_light-dark"></available-usable>
+
+    <section class="bullets">
+        <p>🎨 Enables us to set two values for colors</p>
+        <p>⚠️ Requires <code>color-scheme</code> to be set</p>
+        <p>🥳 Now available in "all" browsers since May</p>
+    </section>
+</div>
+
+<div class="slides-section">
+    <h2>The color-scheme property</h2>
+
+    <section class="bullets">
+        <h3>Valid values for color-scheme</h3>
+        <p><code>normal</code></p>
+        <p><code>light</code></p>
+        <p><code>dark</code></p>
+        <p><code>light dark</code></p>
+        <p><code>dark light</code></p>
+        <p><code>only light</code></p>
+    </section>
+</div>
+
+<div class="slides-section">
+    <h2>The <i>light-dark</i> Function - cont...</h2>
+    <section class="center">
+        <pre>
+    :root {
+        color-scheme: light dark; /* Must be set, or the feature won't work */
+
+        --color-light: #333;
+        --color-dark: #ccc;
+      }
+      
+    .box {
+        /* Light Mode returns the first value, Dark Mode the second */
+        /* Use color values, color names or custom props
+
+        border-color: light-dark(#333, #c0c0c055);
+        
+        background-color: light-dark(beige, darkslategray);
+        
+        color: light-dark(var(--color-light), var(--color-dark));
+    }
+</pre>
+    </section>
+</div>

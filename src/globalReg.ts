@@ -23,3 +23,4 @@ export * from "./2023/scrollbased-anim/scrollbased-anim";
 export * from "./2023/sub-grid/sub-grid";
 
 export * from "./2024/color-functions/color-functions";
+export * from "./2024/light-dark/light-dark";
