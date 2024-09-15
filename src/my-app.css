@@ -18,6 +18,8 @@
   --primary-background-color: gray;
   --primary-text-color: black;
 
+  --header-fonts: 'Russo One', sans-serif;
+
   /* Must be set, or the feature won't work */
   color-scheme: light dark;
 }
@@ -64,7 +66,7 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: 'Russo One', sans-serif;
+  font-family: var(--header-fonts);
 }
 
 h2 {
@@ -175,9 +177,19 @@ my-app {
       flex-direction: column;
       height: var(--menu-height);
 
-      h4 {
+      .strong {
+        font-family: var(--header-fonts);
         color: var(--primary-background-color-color);
-        margin-bottom: 0.2rem;
+        margin-bottom: 0.5rem;
+        padding-top: 0.5rem;
+      }
+
+      nav+.strong {
+        margin-top: 0.2rem;
+      }
+
+      nav div:last-child {
+        padding-bottom: 1rem;
       }
 
       a {
