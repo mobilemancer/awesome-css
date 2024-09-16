@@ -246,6 +246,13 @@ my-app {
     height: 100dvh;
   }
 
+  au-viewport> :first-child {
+    display: block;
+    overflow-x: hidden;
+    height: 100dvh;
+    scroll-snap-type: y mandatory;
+  }
+
   h2 {
     margin-bottom: 0.3rem;
   }

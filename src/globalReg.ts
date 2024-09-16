@@ -11,6 +11,8 @@ export * from "./2017/unset/unset-page";
 
 export * from "./2018/media-hover/media-hover";
 
+export * from "./2020/css-math/css-math";
+
 export * from "./2022/viewport-units/viewport-units";
 export * from "./2022/flex-gap/flex-gap";
 
