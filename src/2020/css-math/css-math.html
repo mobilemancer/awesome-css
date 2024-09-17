@@ -3,21 +3,30 @@
     <available-usable date="2020" url="https://caniuse.com/css-math-functions"></available-usable>
 
     <div class="bullets">
-        <p>🌅 We got calc() early, but needed more</p>
-        <p>↘️ The min() function helps us calculate the smallest value</p>
-        <p>↗️ The max() function helps us calculate the largest value</p>
-        <p>➡️⬅️ The clamp() function helps us make sure a value stays in bounds</p>
+        <p>🌅 We got <code>calc()</code> early (2013), but needed more</p>
+        <p>↘️ The <code>min()</code> function helps us calculate the smallest value</p>
+        <p>↗️ The <code>max()</code> function helps us calculate the largest value</p>
+        <p>➡️⬅️ The <code>clamp()</code> function helps us make sure a value stays in bounds</p>
     </div>
 </div>
 
 <div class="slides-section">
-    <h1>Clamp</h1>
+    <h2>Clamp</h2>
     <div class="bullets">
-        <p>📏 The clamp() function takes three arguments</p>
-        <p>📏 The first argument is the minimum value</p>
-        <p>📏 The second argument is the preferred value</p>
-        <p>📏 The third argument is the maximum value</p>
-        <p>📏 The preferred value will be used if it is within the min and max values</p>
-        <p>📏 If the preferred value is outside the min and max values, the min or max value will be used</p>
+        <p>🔡 Syntax: <code>clamp(min, preffered, max)</code></p>
+        <p>🌟 The preferred value will be used if it is within the min and max values</p>
+        <p>⬅️➡️ If the preferred value is outside the min and max values, the min or max value will be used</p>
+        <p>🧮 The values can be math expressions, calc() not needed</p>
+        <p>📐 The values can be any lenght expression, including nested min() and max() expressions</p>
     </div>
+</div>
+
+<div class="slides-section">
+    <h2>Examples</h2>
+    <section class="center">
+        <pre>
+          .container {
+              width: clamp(90%, 80vw, 1024px);
+              font-size: clamp(1rem, 2.5vw, min(2rem, 32px));
+          }</pre>
 </div>
