@@ -1,9 +1,4 @@
 outro-page {
-    display: block;
-    overflow-x: hidden;
-    height: 100dvh;
-    scroll-snap-type: y mandatory;
-
     a {
         color: hotpink;
     }

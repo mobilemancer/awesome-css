@@ -1,9 +1,4 @@
 color-functions {
-    display: block;
-    overflow-y: scroll;
-    height: 100dvh;
-    scroll-snap-type: y mandatory;
-
     .grid {
         display: grid;
         grid-template-columns: 1fr;

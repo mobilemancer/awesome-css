@@ -1,10 +1,5 @@
 scrollbased-anim {
     scroll-timeline-name: --page;
-
-    display: block;
-    overflow-x: hidden;
-    height: 100dvh;
-    scroll-snap-type: y mandatory;
 }
 
 @keyframes block-grow {
@@ -34,7 +29,7 @@ scrollbased-anim {
 }
 
 .progress-hover {
-    height: 3px;
+    height: 4px;
     position: fixed;
     left: var(--menu-width);
     animation-name: bar-grow;

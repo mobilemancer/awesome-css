@@ -1,10 +1,4 @@
 has-selector {
-    display: block;
-    overflow-y: scroll;
-    height: 100dvh;
-    scroll-snap-type: y mandatory;
-
-    /* example code */
     h2:has(+ div) {
         color: purple;
         margin-bottom: 0.5rem;

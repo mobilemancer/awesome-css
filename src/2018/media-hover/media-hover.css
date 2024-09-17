@@ -1,9 +1,4 @@
 media-hover {
-    display: block;
-    overflow-y: scroll;
-    height: 100dvh;
-    scroll-snap-type: y mandatory;
-
     nav {
         display: flex;
         flex-direction: column;

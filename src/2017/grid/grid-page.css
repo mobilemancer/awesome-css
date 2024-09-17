@@ -1,9 +1,4 @@
 grid-page {
-    display: block;
-    overflow-x: hidden;
-    height: 100dvh;
-    scroll-snap-type: y mandatory;
-
     container-type: inline-size;
 }
 

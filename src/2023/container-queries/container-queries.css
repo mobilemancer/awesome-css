@@ -1,51 +1,46 @@
 container-queries {
-    display: block;
-    overflow-y: scroll;
-    height: 100dvh;
-    scroll-snap-type: y mandatory;
-}
+    .card-container {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        align-items: start;
+        box-sizing: border-box;
+        overflow-y: auto;
+        resize: horizontal;
 
-.card-container {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    align-items: start;
-    box-sizing: border-box;
-    overflow-y: auto;
-    resize: horizontal;
-
-    container-type: inline-size;
-}
-
-.card {
-    width: 30%;
-    background-color: indigo;
-    border-radius: 10px;
-    padding: 20px;
-    box-sizing: border-box;
-
-    .info {
-        filter: brightness(65%);
-        color: var(--primary-text-color);
+        container-type: inline-size;
     }
-}
 
+    .card {
+        width: 30%;
+        background-color: indigo;
+        border-radius: 10px;
+        padding: 20px;
+        box-sizing: border-box;
 
-.big {
-    container-type: inline-size;
-    width: 60%;
-    background-color: purple;
-
-    @container (max-width: 400px) {
         .info {
-            display: none;
+            filter: brightness(65%);
+            color: var(--primary-text-color);
         }
     }
-}
 
 
-@container (max-width: 1200px) {
     .big {
-        width: 30%;
+        container-type: inline-size;
+        width: 60%;
+        background-color: purple;
+
+        @container (max-width: 400px) {
+            .info {
+                display: none;
+            }
+        }
+    }
+
+
+    @container (max-width: 1200px) {
+        .big {
+            width: 30%;
+        }
     }
 }

@@ -1,9 +1,4 @@
 sub-grid {
-    display: block;
-    overflow-x: hidden;
-    height: 100dvh;
-    scroll-snap-type: y mandatory;
-
     .grid-container {
         margin-right: 1rem;
         display: grid;

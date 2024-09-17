@@ -1,16 +1,11 @@
 css-nesting {
-    display: block;
-    overflow-y: scroll;
-    height: 100dvh;
-    scroll-snap-type: y mandatory;
-}
-
-.section-one {
-    h2 {
-        background: linear-gradient(to right, purple, hotpink);
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-        width: fit-content;
+    .section-one {
+        h2 {
+            background: linear-gradient(to right, purple, hotpink);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            width: fit-content;
+        }
     }
 }

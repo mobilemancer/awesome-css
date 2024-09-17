@@ -1,9 +1,4 @@
 flex-gap {
-    display: block;
-    overflow-y: scroll;
-    height: 100dvh;
-    scroll-snap-type: y mandatory;
-
     .flex-container {
         display: flex;
         flex-wrap: wrap;

@@ -1,9 +1,4 @@
 custom-properties {
-    display: block;
-    overflow-y: scroll;
-    height: 100dvh;
-    scroll-snap-type: y mandatory;
-
     .box {
         width: 300px;
         height: 300px;
