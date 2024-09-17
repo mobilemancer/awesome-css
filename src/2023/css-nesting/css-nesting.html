@@ -16,7 +16,7 @@
   <h2>Simple Nesting</h2>
   <section class="center">
     <pre>
-.section-one {
+section {
     h2 {
         background: linear-gradient(to right, purple, hotpink);
         -webkit-background-clip: text;
@@ -24,12 +24,11 @@
         -webkit-text-fill-color: transparent;
         width: fit-content;
     }
-}
-  </pre>
+}  </pre>
 
     <xmp>
       <h2>This is a h2 outside of the section!</h2>
-      <section class="section-one">
+      <section>
         <h2>Section One</h2>
       </section>
     </xmp>
