@@ -1,9 +1,4 @@
 intro-page {
-    display: block;
-    overflow-x: hidden;
-    height: 100dvh;
-    scroll-snap-type: y mandatory;
-
     h1.main {
         text-align: center;
         text-wrap: balance;
@@ -11,7 +6,7 @@ intro-page {
     }
 
     .gradient {
-        background: linear-gradient(to right, rgb(79, 17, 141), rgb(171, 31, 101));
+        background: linear-gradient(to right, oklch(0.7 0.2 280), oklch(0.7 0.2 350));
         -webkit-background-clip: text;
         background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -76,7 +71,7 @@ intro-page {
     }
 
     ul li::before {
-        font-size: 0.5rem;
+        font-size: 0.8rem;
         content: "💜";
         margin-right: 10px;
     }
