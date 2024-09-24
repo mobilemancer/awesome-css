@@ -19,8 +19,7 @@ container-queries {
         box-sizing: border-box;
 
         .info {
-            filter: brightness(65%);
-            color: var(--primary-text-color);
+            color: var(--primary-background-color);
         }
     }
 
