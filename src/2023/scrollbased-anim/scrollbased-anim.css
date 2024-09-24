@@ -5,7 +5,7 @@ scrollbased-anim {
 @keyframes block-grow {
     from {
         background-color: purple;
-        transform: scaleX(0);
+        transform: scaleX(0.5);
     }
 
     to {
@@ -28,25 +28,27 @@ scrollbased-anim {
     }
 }
 
-.progress-hover {
-    height: 4px;
-    position: fixed;
-    left: var(--menu-width);
-    animation-name: bar-grow;
-    animation-timeline: --page;
-    animation-timing-function: ease-in;
+.content-port {
+    border: 2px solid var(--primary-text-color);
 }
 
-@keyframes bar-grow {
+.progress-bar {
+    height: 4px;
+    position: fixed;
+    left: 0;
+    animation-name: reading-bar;
+    animation-timeline: --page;
+    animation-timing-function: linear;
+}
+
+@keyframes reading-bar {
     from {
-        background-color: black;
-        opacity: 0;
-        width: 0px;
+        background-color: rgba(126, 29, 135, 0.3);
+        width: 0%;
     }
 
     to {
         background-color: rgb(126, 29, 135);
-        opacity: 1;
-        width: calc(100% - var(--menu-width));
+        width: 100%;
     }
 }

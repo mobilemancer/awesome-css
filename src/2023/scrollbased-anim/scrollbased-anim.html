@@ -1,4 +1,4 @@
-<div class="progress-hover"></div>
+<div class="progress-bar"></div>
 <div class="slides-section">
     <h1>Scroll based Animations</h1>
     <available-usable date="Experimental" url="https://caniuse.com/?search=animation-timeline"></available-usable>
@@ -29,7 +29,7 @@ animation-timeline: scroll(root | nearest | self block | inline | x | y);    </p
 @keyframes block-grow {
     from {
         background-color: purple;
-        transform: scaleX(0);
+        transform: scaleX(0.5);
     }
 
     to {
@@ -80,13 +80,14 @@ animation-timeline: scroll(root | nearest | self block | inline | x | y);    </p
     <h2>View Progress Timeline</h2>
 
     <div class="bullets">
-        <p>📚 <code>scroll-timeline-name</code> is used to define a named view progress timeline</p>
-        <p>🔄 The timeline progresses is based on the change in visibility of that ☝️ element inside a scroller</p>
-        <p>🎯 The element that the view-timeline is set on is reffered to as the <strong>Subject</strong></p>
-        <p>📈 The visibility of the subject inside the viewport is tracked — by default, the
-            timeline is at 0% at one edge of the viewport and 100% when at the opposite edge</p>
-        <p>🎥 The name is referenced in an animation-timeline declaration and used as the timeline progresses </p>
-        <p>🚫 If the viewport does not overflow or if the overflow is hidden or clipped, no timeline will be created</p>
+        <p>📚 A <code>scroll-timeline-name</code>, on an element, is used to define a named view progress timeline</p>
+        <p>🔄 The timeline progress is based on the change in visibility of that ☝️ element inside a scroller</p>
+        <p>🎯 The element that the view-timeline is set on is called <strong>Subject</strong></p>
+        <p>📈 Visibility of the <strong>Subject</strong> inside the viewport is tracked — by default, the
+            timeline is at 0% at one edge and 100% when at the opposite edge</p>
+        <p>🎥 The <code>scroll-timeline-name</code> is referenced in an <code>animation-timeline</code> declaration</p>
+        <p>⚠️⚠️ If the viewport does not overflow or if the overflow is hidden or clipped, no timeline will be created
+        </p>
     </div>
 </div>
 
@@ -94,17 +95,15 @@ animation-timeline: scroll(root | nearest | self block | inline | x | y);    </p
     <h2>Code - Animation Setup</h2>
     <section class="center">
         <pre>
-@keyframes bar-grow {
+@keyframes reading-bar {
     from {
-        background-color: black;
-        opacity: 0;
-        width: 0px;
+        background-color: rgba(126, 29, 135, 0.3);
+        width: 0%;
     }
 
     to {
-        background-color: rgb(79, 16, 120);
-        opacity: 1;
-        width: calc(100% - var(--menu-width));
+        background-color: rgb(126, 29, 135);
+        width: 100%;
     }
 }</pre>
     </section>
@@ -119,10 +118,11 @@ animation-timeline: scroll(root | nearest | self block | inline | x | y);    </p
 
     <h2>Code - Defining the scroller</h2>
     <pre>
-.progress-hover {
+.progress-bar {
+    height: 4px;
     position: fixed;
-    left: var(--menu-width);
-    animation-name: bar-grow;
+    left: 0;
+    animation-name: reading-bar;
     animation-timeline: --page;
     animation-timing-function: linear;
 }        </pre>
