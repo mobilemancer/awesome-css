@@ -52,7 +52,7 @@ intro-page {
         }
 
         .tall {
-            height: 70%;
+            height: min(90%, 522px);
         }
 
         .wide {
