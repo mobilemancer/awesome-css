@@ -1,5 +1,5 @@
 has-selector {
-    h2:has(+ div) {
+    *:has(+ div.awesome) {
         color: purple;
         margin-bottom: 0.5rem;
     }

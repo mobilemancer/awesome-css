@@ -16,7 +16,7 @@
     <p>CSS to select H2 with following div</p>
 
     <pre>
-    h2:has(+ div) {
+    *:has(+ div.awesome) {
       color: purple;
       margin-bottom: 0.5rem;
     }
@@ -24,13 +24,10 @@
 
     <xmp>
       <h2>H2 Heading</h2>
-      <p>Lorem, ipsum...</p>
-
-      <h3>H3 Heading</h3>
-      <div>Lorem, ipsum...</div>
+      <div>This is a div.</div>
 
       <h2>H2 Heading</h2>
-      <div>Lorem, ipsum...</div>
+      <div class="awesome">This is an awesome div!</div>
     </xmp>
   </section>
 </div>
@@ -40,23 +37,12 @@
   <section class="center">
     <h2>H2 Heading</h2>
     <p>
-      This is a <code>p</code>. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi
-      consectetur amet vel ea. Voluptas eveniet odio minus corporis velit suscipit,
-      a quia asperiores deserunt voluptates itaque autem ad alias neque?
+      This is a <code>div</code>.
     </p>
 
-    <h3>H3 Heading</h3>
-    <div>
-      Tis is a <code>div</code>. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi
-      consectetur amet vel ea. Voluptas eveniet odio minus corporis velit suscipit,
-      a quia asperiores deserunt voluptates itaque autem ad alias neque?
-    </div>
-
     <h2>H2 Heading</h2>
-    <div>
-      This is a <code>div</code>. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi
-      consectetur amet vel ea. Voluptas eveniet odio minus corporis velit suscipit,
-      a quia asperiores deserunt voluptates itaque autem ad alias neque?
+    <div class="awesome">
+      This is an awesome <code>div</code>.
     </div>
   </section>
 </div>

@@ -66,7 +66,7 @@
       }
     </pre>
 
-    <p>And...</p>
+    <p>And Awesome Auto Positioning</p>
     <pre>
       .container {
         display: grid;
@@ -184,29 +184,6 @@
 </div>
 
 <div class="slides-section">
-  <h2>Implicit Areas</h2>
-  <section class="center">
-    <p>📏 Define matching lines with <code>{identifier}-start</code> & <code>{identifier}-end</code></p>
-    <p>📐 Will create an area with the <code>{identifier}</code> as name</p>
-
-    <pre>
-      .container {
-        display: grid;
-        grid-template-columns: 
-          [full-start] 100px [main-start] auto [main-end] 1fr [full-end];
-        grid-template-rows: [height-start] auto [height-end];
-      }
-    </pre>
-
-    <pre>
-      .item {
-        grid-area: main;
-      }
-    </pre>
-  </section>
-</div>
-
-<div class="slides-section">
   <h2>Responsive Grid</h2>
   <section class="center">
     <p> Use <code>@media</code> or <code>@container</code> querries to modify the grid to make it responsive </p>
@@ -237,5 +214,28 @@
     <div class="item left">Left side</div>
     <div class="item main">Middle</div>
     <div class="item header">Header</div>
+  </section>
+</div>
+
+<div class="slides-section">
+  <h2>Implicit Areas</h2>
+  <section class="center">
+    <p>📏 Define matching lines with <code>{identifier}-start</code> & <code>{identifier}-end</code></p>
+    <p>📐 Will create an area with the <code>{identifier}</code> as name</p>
+
+    <pre>
+      .container {
+        display: grid;
+        grid-template-columns: 
+          [full-start] 100px [main-start] auto [main-end] 1fr [full-end];
+        grid-template-rows: [height-start] auto [height-end];
+      }
+    </pre>
+
+    <pre>
+      .item {
+        grid-area: main;
+      }
+    </pre>
   </section>
 </div>
