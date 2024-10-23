@@ -9,7 +9,7 @@ custom-properties {
 }
 
 :root {
-    --color: purple;
+    --color: lightgreen;
     --shadow-length: 10px;
     --shadow: var(--shadow-length) var(--shadow-length) 5px rgb(57, 4, 57);
 
