@@ -68,21 +68,23 @@ section {
     <p>⚠️ For compound selectors using ampersand "&" is a must!</p>
 
     <pre>
-      .card {
+      div {
         .big { }
       }
 
       ⬇️
 
-      .card .big { }
+      div .big { }
 
-      .phone {
-        &.really-big { }
+      ----------------------------
+
+      div {
+        &.big { }
       }
 
       ⬇️
 
-      .phone.really-big { }
+      div.big { }
     </pre>
   </section>
 </div>
