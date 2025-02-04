@@ -2,4 +2,15 @@ outro-page {
     a {
         color: hotpink;
     }
+
+    .qr-codes {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        max-height: 300px;
+        gap: 4rem;
+
+        img {
+            justify-self: center;
+        }
+    }
 }
