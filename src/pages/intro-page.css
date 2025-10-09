@@ -11,6 +11,8 @@ intro-page {
         background-clip: text;
         -webkit-text-fill-color: transparent;
         width: fit-content;
+        -webkit-text-stroke: var(--text-outline);
+        text-shadow: var(--main-header-shadow);
     }
 
     img.main-image {

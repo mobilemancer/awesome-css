@@ -6,12 +6,12 @@
   --menu-color-dark-bg: rgba(62, 61, 62, 0.9);
   --menu-color-dark: rgb(244, 243, 243);
 
-  --menu-btn-color-light-bg: darkgrey;
+  --menu-btn-color-light-bg: rgb(250, 250, 252);
   --menu-btn-color-light: black;
   --menu-btn-color-dark-bg: rgb(47, 46, 47);
   --menu-btn-color-dark: rgb(228, 226, 226);
 
-  --menu-btn-light-box-shadow: 0 3px 8px rgba(204, 188, 204, 0.7);
+  --menu-btn-light-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.12);
   --menu-btn-dark-box-shadow: 0 3px 8px rgba(31, 18, 31, 0.7);
   --menu-position-left: 100;
 
@@ -19,6 +19,8 @@
   --primary-text-color: black;
 
   --header-fonts: 'Russo One', sans-serif;
+
+  --main-header-shadow: 3px 3px 3px #93919130;
 
   /* Must be set, or the feature won't work */
   color-scheme: light dark;
@@ -99,6 +101,7 @@ my-app {
     justify-content: center;
     color: light-dark(var(--menu-btn-color-light), var(--menu-btn-color-dark));
     background-color: light-dark(var(--menu-btn-color-light-bg), var(--menu-btn-color-dark-bg));
+    box-shadow: light-dark(var(--menu-btn-light-box-shadow), var(--menu-btn-dark-box-shadow));
 
     /* hamburger */
     .hamburger-icon {
