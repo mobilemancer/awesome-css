@@ -18,11 +18,15 @@
   --primary-background-color: rgb(228, 227, 224);
   --primary-text-color-light: black;
   --primary-text-color-dark: black;
+  --primary-text-color: black;
 
   --code-text-color-light: beige;
   --code-text-color-dark: beige;
 
   --secondary-text-color: darkgray;
+
+  --text-color-light: beige;
+
 
   --header-fonts: 'Russo One', sans-serif;
 
@@ -322,6 +326,14 @@ my-app {
     height: 100%;
     flex-direction: column;
     justify-content: center;
+  }
+
+  .center-horizontal {
+    align-self: center;
+  }
+
+  .big {
+    font-size: 34pt;
   }
 }
 
