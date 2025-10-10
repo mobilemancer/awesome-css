@@ -26,6 +26,8 @@
 
   --main-header-shadow: 3px 3px 3px #93919130;
 
+  --link-color: rebeccapurple;
+
   /* Must be set, or the feature won't work */
   color-scheme: light dark;
 }
@@ -35,6 +37,7 @@
   :root {
     --primary-background-color: black;
     --primary-text-color: beige;
+    --link-color: hotpink;
   }
 }
 
