@@ -7,6 +7,7 @@ sub-grid {
         gap: 1rem;
 
         .grid-item {
+            color: var(--text-color-light);
             height: 9rem;
             display: flex;
             justify-content: center;
