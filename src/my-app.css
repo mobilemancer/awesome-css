@@ -303,6 +303,11 @@ my-app {
     object-fit: contain;
   }
 
+  & img.full-page {
+    height: 100dvh;
+    width: 100dvw;
+  }
+
   .bullets {
     font-size: larger;
     height: 100%;
@@ -334,6 +339,10 @@ my-app {
 
   .big {
     font-size: 34pt;
+  }
+
+  &.no-margin {
+    margin: 0px;
   }
 }
 
