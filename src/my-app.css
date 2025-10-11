@@ -34,6 +34,9 @@
 
   --link-color: rebeccapurple;
 
+  --reverse-text-color: #fff;
+  --reverse-background-color: #000;
+
   /* Must be set, or the feature won't work */
   color-scheme: light dark;
 }
