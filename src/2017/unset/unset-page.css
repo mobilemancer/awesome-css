@@ -2,7 +2,7 @@ unset-page {
     container-type: inline-size;
 
     h3 {
-        margin-bottom: 1.5rem;
+        margin-bottom: var(--spacing-m);
     }
 
     .container {
