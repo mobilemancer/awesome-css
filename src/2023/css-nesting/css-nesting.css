@@ -1,14 +1,12 @@
 css-nesting {
     h2 {
         padding-bottom: 30px;
-
     }
 
     .section-one {
         border: 1px solid var(--primary-text-color);
         border-radius: 10px;
-        padding: 0px 10px 20px 10px;
-        margin: 10px;
+        padding: 0px 20px 20px 20px;
 
         &::before {
             content: 'section';
