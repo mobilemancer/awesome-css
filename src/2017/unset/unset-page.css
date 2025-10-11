@@ -10,21 +10,16 @@ unset-page {
         background-color: indigo;
         color: var(--code-text-color-light);
         display: flex;
-        padding: 20px;
+        padding: var(--spacing-m);
 
         div {
             border: 1px solid red;
-            padding: 10px;
-        }
-
-        div>:first-child {
-            border: inherit;
-            padding: 10px;
+            padding: var(--spacing-m);
         }
 
         p {
             border: 2px solid green;
-            padding: 10px;
+            padding: var(--spacing-m);
         }
 
         .no-border {
