@@ -5,6 +5,7 @@ color-functions {
         width: 90%;
 
         .box {
+            color: var(--text-color-light);
             height: 4rem;
             display: flex;
             align-items: center;

@@ -17,12 +17,8 @@ container-queries {
         border-radius: 10px;
         padding: 20px;
         box-sizing: border-box;
-
-        .info {
-            color: var(--primary-background-color);
-        }
+        color: var(--text-color-light);
     }
-
 
     .big {
         container-type: inline-size;
@@ -35,7 +31,6 @@ container-queries {
             }
         }
     }
-
 
     @container (max-width: 1200px) {
         .big {

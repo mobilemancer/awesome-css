@@ -6,19 +6,38 @@
   --menu-color-dark-bg: rgba(62, 61, 62, 0.9);
   --menu-color-dark: rgb(244, 243, 243);
 
-  --menu-btn-color-light-bg: darkgrey;
+  --spacing-m: 1.5rem;
+
+  --menu-btn-color-light-bg: rgb(250, 250, 252);
   --menu-btn-color-light: black;
   --menu-btn-color-dark-bg: rgb(47, 46, 47);
   --menu-btn-color-dark: rgb(228, 226, 226);
 
-  --menu-btn-light-box-shadow: 0 3px 8px rgba(204, 188, 204, 0.7);
+  --menu-btn-light-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.12);
   --menu-btn-dark-box-shadow: 0 3px 8px rgba(31, 18, 31, 0.7);
   --menu-position-left: 100;
 
-  --primary-background-color: gray;
+  --primary-background-color: rgb(228, 227, 224);
+  --primary-text-color-light: black;
+  --primary-text-color-dark: black;
   --primary-text-color: black;
 
+  --code-text-color-light: beige;
+  --code-text-color-dark: beige;
+
+  --secondary-text-color: darkgray;
+
+  --text-color-light: beige;
+
+
   --header-fonts: 'Russo One', sans-serif;
+
+  --main-header-shadow: 3px 3px 3px #93919130;
+
+  --link-color: rebeccapurple;
+
+  --reverse-text-color: #fff;
+  --reverse-background-color: #000;
 
   /* Must be set, or the feature won't work */
   color-scheme: light dark;
@@ -29,6 +48,7 @@
   :root {
     --primary-background-color: black;
     --primary-text-color: beige;
+    --link-color: hotpink;
   }
 }
 
@@ -46,7 +66,7 @@
 }
 
 ::-webkit-scrollbar {
-  width: 3px;
+  width: 5px;
 }
 
 /* end Scrollbar styling */
@@ -288,6 +308,11 @@ my-app {
     object-fit: contain;
   }
 
+  & img.full-page {
+    height: 100dvh;
+    width: 100dvw;
+  }
+
   .bullets {
     font-size: larger;
     height: 100%;
@@ -312,9 +337,22 @@ my-app {
     flex-direction: column;
     justify-content: center;
   }
+
+  .center-horizontal {
+    align-self: center;
+  }
+
+  .big {
+    font-size: 34pt;
+  }
+
+  &.no-margin {
+    margin: 0px;
+  }
 }
 
 pre {
+  color: light-dark(var(--code-text-color-light), var(--code-text-color-dark));
   width: fit-content;
   background-color: darkslategrey;
   box-shadow: inset 0px 4px 3px -2px #000,
@@ -330,6 +368,7 @@ pre {
 }
 
 xmp {
+  color: light-dark(var(--code-text-color-light), var(--code-text-color-dark));
   width: fit-content;
   background-color: darkslateblue;
   box-shadow: inset 0px 4px 3px -2px #000,

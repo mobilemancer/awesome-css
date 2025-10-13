@@ -33,7 +33,7 @@ scrollbased-anim {
 }
 
 .progress-bar {
-    height: 4px;
+    height: 6px;
     position: fixed;
     left: 0;
     animation-name: reading-bar;

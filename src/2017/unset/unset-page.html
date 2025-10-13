@@ -15,7 +15,6 @@
     <xmp>
       <div>
         <p>...</p>
-        <p>...</p>
         <p class="no-border">...</p>
       </div>
     </xmp>
@@ -28,10 +27,6 @@
     <pre>
       div {
           border: 1px solid red;
-      }
-
-      div>:first-child {
-          border: inherit;
       }
 
       p {
@@ -51,7 +46,6 @@
       <section>
         <h3>Unset</h3>
         <div>
-          <p>We're in the first child of the div (a paragraph), we have a red border</p>
           <p>We're in a nested paragraph, we have a Green border</p>
           <p class="no-border">We're in a nested paragraph, but border is unset</p>
         </div>
